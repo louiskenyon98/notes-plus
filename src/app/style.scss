@@ -1,0 +1,91 @@
+//Import Google Fonts.
+@import url('https://fonts.googleapis.com/css?family=Staatliches|Thasadith|Major+Mono+Display');
+.nav {
+  .title {
+    font-family: 'Major Mono Display', monospace;
+    font-size: 2.5em !important;
+    padding: 0.6em !important;
+  }
+}
+.column {
+  margin-bottom: 2rem;
+  .card {
+    max-height: 325px;
+    margin: auto;
+  }
+  .card:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,.09), 0 6px 6px rgba(0,0,0,.13);
+  }
+  .header {
+    font-family: 'Thasadith', sans-serif !important;
+  }
+  .body {
+    max-height: 170px;
+    overflow: hidden;
+    white-space: pre-wrap;
+  }
+}
+.edit-button {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer
+}
+.edit-button:hover {
+  color: cadetblue;
+  transform: rotate(90deg);
+}
+.delete-button {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer
+}
+.delete-button:hover {
+  color: crimson;
+  transform: rotate(180deg);
+}
+
+//Using !important to override styling provided by semantic-ui.
+.note-creator {
+  width: 100%;
+  margin-top: 10vh;
+  h2 {
+    text-align: center;
+  }
+}
+.form {
+  align-items: center !important;
+  font-weight: 300;
+  button {
+    background-color: #3498db !important;
+    color: #fff !important;
+  }
+  button:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,.09), 0 6px 6px rgba(0,0,0,.13) !important;
+  }
+  .form-title-field-wrapper {
+    background-color: #3498db !important;
+    padding: 10px !important;
+    margin: 0 !important;
+  }
+  .form-title-field {
+    border: none !important;
+    font-size: 1.5em !important;
+    text-align: center !important;
+    background-color: #2980b9 !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    font-family: 'Thasadith', sans-serif !important;
+    :focus {
+      color: #fff !important;
+    }
+  }
+  .form-body-field-wrapper {
+    .form-body-field {
+      border: none !important;
+      font-size: 1.5em !important;
+      font-family: 'Thasadith', sans-serif !important;
+      resize: none;
+    }
+
+  }
+}
