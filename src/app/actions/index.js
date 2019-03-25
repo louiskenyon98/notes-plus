@@ -2,7 +2,7 @@ import notesAPI from '../apis/notesAPI';
 import history from '../history';
 import {GET_NOTE, GET_NOTES, POST_NOTE, PATCH_NOTE, DELETE_NOTE, API_ERROR} from "./types";
 
-//I have only added error handling to this route, but I have added it to App.js.
+//I have only added error handling to this route, but I have added it to App.jsx.
 //Thereby assuring that I can only use the application if the API is functioning.
 //Action creator to get all notes.
 export const getNotes = () => async dispatch => {
