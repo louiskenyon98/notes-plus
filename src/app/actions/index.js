@@ -1,4 +1,4 @@
-import notesAPI from '../apis/notesAPI';
+import axios from 'axios';
 import history from '../history';
 import {GET_NOTE, GET_NOTES, POST_NOTE, PATCH_NOTE, DELETE_NOTE, API_ERROR} from "./types";
 
@@ -7,7 +7,7 @@ import {GET_NOTE, GET_NOTES, POST_NOTE, PATCH_NOTE, DELETE_NOTE, API_ERROR} from
 //Action creator to get all notes.
 export const getNotes = () => async dispatch => {
     try {
-        const response = await notesAPI.get('/api/notes/');
+        const response = await axios.get('/api/notes/');
         dispatch({
             type: 'GET_NOTES',
             payload: response.data
@@ -22,7 +22,7 @@ export const getNotes = () => async dispatch => {
 //Couldn't figure out which way was the best way to write this, so I wrote it both ways for posterity.
 
 // export const getNotes = () => async dispatch => {
-//     const response = await notesAPI.get('/api/notes/')
+//     const response = await axios.get('/api/notes/')
 //         .then(function(response) {
 //             dispatch({
 //                 type: 'GET_NOTES',
@@ -38,7 +38,7 @@ export const getNotes = () => async dispatch => {
 
 //Action creator to get a single note.
 export const getNote = (id) => async dispatch => {
-    const response = await notesAPI.get(`/api/notes/${id}`);
+    const response = await axios.get(`/api/notes/${id}`);
     dispatch({
         type: 'GET_NOTE',
         payload: response.data
