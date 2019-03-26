@@ -46,7 +46,7 @@ export const getNote = (id) => async dispatch => {
 };
 //Action creator to post a new note
 export const postNote = (data) => async dispatch => {
-    const response = await notesAPI.post('/api/notes/', data);
+    const response = await axios.post('/api/notes/', data);
     dispatch({
         type: 'POST_NOTE',
         payload: response.data
@@ -55,7 +55,7 @@ export const postNote = (data) => async dispatch => {
     history.push('/');
 };
 export const patchNote = (data) => async dispatch => {
-    const response = await notesAPI.patch('/api/notes/', data);
+    const response = await axios.patch('/api/notes/', data);
     dispatch({
         type: 'PATCH_NOTE',
         payload: response.data
@@ -65,7 +65,7 @@ export const patchNote = (data) => async dispatch => {
 };
 
 export const deleteNote = (id) => async dispatch => {
-    const response = await notesAPI.delete(`/api/notes/${id}`, null);
+    const response = await axios.delete(`/api/notes/${id}`, null);
     dispatch({
         type: 'DELETE_NOTE',
         payload: response.data.id
