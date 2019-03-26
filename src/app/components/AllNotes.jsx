@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
 import {getNotes, deleteNote} from '../actions';
-import styles from '../style.scss';
+import styles from '../../themes/style.scss';
 
 class AllNotes extends React.Component {
     componentDidMount() {

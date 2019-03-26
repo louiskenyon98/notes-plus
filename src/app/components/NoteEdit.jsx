@@ -3,7 +3,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {getNote, patchNote} from '../actions';
 import NoteForm from './NoteForm';
-import styles from '../style.scss';
+import styles from '../../themes/style.scss';
 
 class NoteEdit extends React.Component {
     componentDidMount() {

@@ -2,7 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {postNote} from '../actions';
 import NoteForm from './NoteForm';
-import styles from '../style.scss';
+import styles from '../../themes/style.scss';
 
 
 class NoteCreate extends React.Component {

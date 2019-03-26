@@ -1,7 +1,7 @@
 import React from 'react';
 import {Field, reduxForm} from 'redux-form';
 import {Link} from 'react-router-dom';
-import styles from '../style.scss';
+import styles from '../../themes/style.scss';
 
 class NoteForm extends React.Component {
     onSubmit = (formValues) => {
