@@ -2,8 +2,6 @@ import React from 'react';
 
 import Card from '../Card';
 
-import styles from '../../../../themes/style.scss';
-
 class AllNotes extends React.Component {
     renderAll() {
         return this.props.notes.slice(0).reverse().map((note) => {
