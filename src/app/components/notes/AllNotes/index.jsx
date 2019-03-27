@@ -1,13 +1,8 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import {connect} from 'react-redux';
-import {getNotes, deleteNote} from '../actions';
-import styles from '../../themes/style.scss';
+import styles from '../../../../themes/style.scss';
 
 class AllNotes extends React.Component {
-    componentDidMount() {
-        this.props.getNotes();
-    }
     renderAll() {
         //Map array in reverse order so as to render the newest notes first.
         //Shallow copy so as not to alter original array.
@@ -30,7 +25,7 @@ class AllNotes extends React.Component {
                         <div className="extra content">
                             <span className="right floated pencil alternate">
                                 <Link to={`/edit/${note.id}`}>
-                                    <i className={`pencil alternate icon ${styles["edit-button"]}`} />
+                                    <i className={`pencil alternate icon ${styles["edit-button"]}`}/>
                                 </Link>
                             </span>
                         </div>
@@ -39,6 +34,7 @@ class AllNotes extends React.Component {
             )
         })
     }
+
     render() {
         return (
             <div className={`container-fluid`}>
@@ -50,12 +46,4 @@ class AllNotes extends React.Component {
     }
 }
 
-
-const mapStateToProps = (state) => {
-    //Take notes objects and convert to array.
-    return {
-        notes: Object.values(state.notes)
-    }
-};
-
-export default connect(mapStateToProps, {getNotes, deleteNote})(AllNotes);
+export default AllNotes;

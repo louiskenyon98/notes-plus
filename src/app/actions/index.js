@@ -56,7 +56,7 @@ export const postNote = (data) => dispatch => {
                 type: 'POST_NOTE',
                 payload: response.data
             })
-        })
+        });
     //Programmatic navigation of user back to AllNotes after form submission is completed.
     history.push('/');
 };

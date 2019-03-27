@@ -2,13 +2,14 @@ import React from 'react';
 import {Router, Route} from 'react-router-dom';
 import {connect} from 'react-redux';
 
-import Navigation from './Navigation';
-import history from '../history';
+import Navigation from './components/common/Navigation';
+import history from './history';
 
-import {getNotes} from '../actions';
-import AllNotes from './AllNotes';
-import NoteCreate from './NoteCreate';
-import NoteEdit from './NoteEdit';
+import {getNotes} from './actions';
+// import AllNotes from './components/AllNotes';
+import AllNotesContainer from './containers/notes/AllNotes'
+import NoteCreate from './components/NoteCreate';
+import NoteEdit from './components/NoteEdit';
 
 class App extends React.Component {
     componentDidMount() {
@@ -24,7 +25,7 @@ class App extends React.Component {
                     <Router history={history}>
                         <div>
                             <Navigation/>
-                            <Route path="/" exact component={AllNotes}/>
+                            <Route path="/" exact component={AllNotesContainer}/>
                             <Route path="/new" exact component={NoteCreate}/>
                             <Route path="/edit/:id" exact component={NoteEdit}/>
                         </div>
