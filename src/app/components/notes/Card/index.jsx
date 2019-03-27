@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 
 import styles from '../../../../themes/style.scss';
 
-class Card extends React.Component {
+class Card extends React.PureComponent {
     render() {
         return (
             <div className={`col-xs-1 col-md-4 col-xl-3 d-flex align-items-stretch ${styles.column}`} key={this.props.id}>
