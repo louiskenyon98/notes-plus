@@ -7,10 +7,11 @@ class AllNotes extends React.Component {
         return this.props.notes.slice(0).reverse().map((note) => {
             return (
                 <Card
+                    key={note.id}
                     id={note.id}
                     title={note.title}
                     body={note.body}
-                    deleteFunc={this.props.deleteNote}
+                    delete={this.props.deleteNote}
                 />
             )
         })

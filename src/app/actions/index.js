@@ -1,6 +1,6 @@
 import axios from 'axios';
 import history from '../history';
-import {GET_NOTE, GET_NOTES, POST_NOTE, PATCH_NOTE, DELETE_NOTE, API_ERROR} from "./types";
+import {GET_NOTE, GET_NOTES, POST_NOTE, PATCH_NOTE, DELETE_NOTE} from "./types";
 
 //I have only added error handling to this route, but I have added it to App.jsx.
 //Thereby assuring that I can only use the application if the API is functioning.
@@ -27,13 +27,8 @@ export const getNotes = () => dispatch => {
     axios.get('/api/notes/')
         .then(function (response) {
             dispatch({
-                type: 'GET_NOTES',
+                type: GET_NOTES,
                 payload: response.data
-            })
-        })
-        .catch(function () {
-            dispatch({
-                type: 'API_ERROR'
             })
         })
 };
@@ -43,7 +38,7 @@ export const getNote = (id) => dispatch => {
     axios.get(`/api/notes/${id}`)
         .then(function (response) {
             dispatch({
-                type: 'GET_NOTE',
+                type: GET_NOTE,
                 payload: response.data
             })
         })
@@ -53,7 +48,7 @@ export const postNote = (data) => dispatch => {
     axios.post('/api/notes/', data)
         .then(function (response) {
             dispatch({
-                type: 'POST_NOTE',
+                type: POST_NOTE,
                 payload: response.data
             })
         });
@@ -64,7 +59,7 @@ export const patchNote = (data) => dispatch => {
     axios.patch('/api/notes/', data)
         .then(function (response) {
             dispatch({
-                type: 'PATCH_NOTE',
+                type: PATCH_NOTE,
                 payload: response.data
             })
         });
@@ -76,7 +71,7 @@ export const deleteNote = (id) => dispatch => {
     axios.delete(`/api/notes/${id}`, null)
         .then(function(response) {
             dispatch({
-                type: 'DELETE_NOTE',
+                type: DELETE_NOTE,
                 payload: response.data.id
             })
         })

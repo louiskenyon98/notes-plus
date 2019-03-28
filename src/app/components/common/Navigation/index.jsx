@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import styles from '../../../../themes/style.scss';
-class Navigation extends React.Component {
+class Navigation extends React.PureComponent {
     render() {
         return (
 

@@ -1,16 +1,19 @@
 import _ from 'lodash';
 import React from 'react';
 import {connect} from 'react-redux';
-import {getNote, patchNote} from '../actions';
-// import NoteForm from './NoteForm';
-import NoteFormContainer from '../containers/notes/NoteForm';
-import styles from '../../themes/style.scss';
+import {getNote, patchNote} from '../../../actions';
+import NoteFormContainer from '../NoteForm';
+import styles from '../../../../themes/style.scss';
 
-class NoteEdit extends React.Component {
+class NoteEditContainer extends React.Component {
+    constructor(props){
+        super(props);
+        this.onSubmit = this.onSubmit.bind(this);
+    }
     componentDidMount() {
         this.props.getNote(this.props.match.params.id);
     }
-    onSubmit = (formValues) => {
+    onSubmit(formValues) {
       this.props.patchNote(formValues)
     };
     render() {
@@ -34,4 +37,4 @@ const mapStateToProps = (state, ownProps) => {
 export default connect(
     mapStateToProps,
     {getNote, patchNote}
-)(NoteEdit)
+)(NoteEditContainer)

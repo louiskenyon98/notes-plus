@@ -6,7 +6,12 @@ import styles from '../../../../themes/style.scss';
 import {Link} from "react-router-dom";
 
 class NoteFormContainer extends React.Component {
-    onSubmit = (formValues) => {
+    constructor(props) {
+        super(props);
+        this.onSubmit = this.onSubmit.bind(this)
+    }
+
+    onSubmit (formValues) {
         this.props.onSubmit(formValues)
     };
     render() {
