@@ -1,5 +1,5 @@
 import React from 'react';
-import {Router, Route} from 'react-router-dom';
+import {Router, Route, Switch} from 'react-router-dom';
 import Navigation from '../components/common/Navigation';
 import history from '../history';
 
@@ -11,14 +11,17 @@ class Routes extends React.Component {
     render() {
         return (
             <Router history={history}>
-                <div>
+                <React.Fragment>
                     <Navigation/>
-                    <Route path="/" exact component={AllNotesContainer}/>
-                    <Route path="/new" exact component={NoteCreateContainer}/>
-                    <Route path="/edit/:id" exact component={NoteEditContainer}/>
-                </div>
+                    <Switch>
+                        <Route path="/edit/:id" component={NoteEditContainer}/>
+                        <Route path="/new" component={NoteCreateContainer}/>
+                        <Route path="/" component={AllNotesContainer}/>
+                    </Switch>
+                </React.Fragment>
             </Router>
         )
     }
 }
+
 export default Routes;
