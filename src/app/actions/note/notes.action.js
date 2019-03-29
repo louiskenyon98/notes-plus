@@ -1,14 +1,10 @@
 import axios from 'axios';
 import history from '../../history';
-import {dispatchModal} from "../common/modal.action";
+import {showMessageModal} from "../common/modal.action";
 import {GET_NOTE, GET_NOTES, POST_NOTE, PATCH_NOTE, DELETE_NOTE} from "../types";
 
 
-
-//I have only added error handling to this route, but I have added it to App.jsx.
-//Thereby assuring that I can only use the application if the API is functioning.
 //Action creator to get all notes.
-
 //Kept async/await for posterity and future reference.
 
 // export const getNotes = () => dispatch => {
@@ -25,17 +21,17 @@ import {GET_NOTE, GET_NOTES, POST_NOTE, PATCH_NOTE, DELETE_NOTE} from "../types"
 //     }
 // };
 
-
-export const getNotes = () => dispatch => {
+export const getNotes = (othercrap) => dispatch => {
     axios.get('/api/notes/')
         .then(function (response) {
             dispatch({
                 type: GET_NOTES,
                 payload: response.data
-            })
+            });
+            dispatch(showMessageModal("success"));
         })
         .catch(() => {
-            dispatch(dispatchModal('failed to get notes'));
+            dispatch(showMessageModal("failed"))
         })
 };
 
@@ -75,7 +71,7 @@ export const patchNote = (data) => dispatch => {
 
 export const deleteNote = (id) => dispatch => {
     axios.delete(`/api/notes/${id}`, null)
-        .then(function(response) {
+        .then(function (response) {
             dispatch({
                 type: DELETE_NOTE,
                 payload: response.data.id

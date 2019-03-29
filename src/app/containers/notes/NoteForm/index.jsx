@@ -8,7 +8,7 @@ import {Link} from "react-router-dom";
 class NoteFormContainer extends React.Component {
     constructor(props) {
         super(props);
-        this.onSubmit = this.onSubmit.bind(this)
+        this.onSubmit = this.onSubmit.bind(this);
     }
 
     onSubmit (formValues) {

@@ -1,5 +1,5 @@
 import {
-    SHOW_HELLO_WORLD_MODAL,
+    SHOW_MESSAGE_MODAL,
     CLOSE_MODAL
 } from "../../actions/types";
 
@@ -16,7 +16,7 @@ export default (state = initialState, action) => {
         //         modalType: action.modalType,
         //         modalContent: action.modalContent
         //     };
-        case SHOW_HELLO_WORLD_MODAL:
+        case SHOW_MESSAGE_MODAL:
             return {
                 show: true,
                 type: 'helloWorld',

@@ -12,7 +12,7 @@ class NoteCreateContainer extends React.Component {
         this.onSubmit = this.onSubmit.bind(this);
     }
 
-    onSubmit (formValues) {
+    onSubmit(formValues) {
         this.props.postNote(formValues);
         this.props.showHelloWorldModal("Successful")
     };
@@ -30,4 +30,7 @@ class NoteCreateContainer extends React.Component {
     }
 }
 
-export default connect(null, {postNote, showHelloWorldModal})(NoteCreateContainer);
+export default connect(
+    null,
+    {postNote, showHelloWorldModal}
+)(NoteCreateContainer);
