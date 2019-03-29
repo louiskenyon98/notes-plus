@@ -1,9 +1,8 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {getNotes, deleteNote} from '../../../actions';
+import {getNotes, deleteNote} from '../../../actions/note/notes.action';
 
 import AllNotes from "../../../components/notes/AllNotes";
-// import AllNotes from "../../components/AllNotes";
 
 class AllNotesContainer extends React.Component {
     componentDidMount() {

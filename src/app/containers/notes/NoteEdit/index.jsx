@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import {connect} from 'react-redux';
-import {getNote, patchNote} from '../../../actions';
+import {getNote, patchNote} from '../../../actions/note/notes.action';
 import NoteFormContainer from '../NoteForm';
 import styles from '../../../../themes/style.scss';
 

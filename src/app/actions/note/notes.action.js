@@ -1,6 +1,9 @@
 import axios from 'axios';
-import history from '../history';
-import {GET_NOTE, GET_NOTES, POST_NOTE, PATCH_NOTE, DELETE_NOTE} from "./types";
+import history from '../../history';
+import {dispatchModal} from "../common/modal.action";
+import {GET_NOTE, GET_NOTES, POST_NOTE, PATCH_NOTE, DELETE_NOTE} from "../types";
+
+
 
 //I have only added error handling to this route, but I have added it to App.jsx.
 //Thereby assuring that I can only use the application if the API is functioning.
@@ -30,6 +33,9 @@ export const getNotes = () => dispatch => {
                 type: GET_NOTES,
                 payload: response.data
             })
+        })
+        .catch(() => {
+            dispatch(dispatchModal('failed to get notes'));
         })
 };
 

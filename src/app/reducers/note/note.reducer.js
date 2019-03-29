@@ -5,9 +5,13 @@ import {
     POST_NOTE,
     PATCH_NOTE,
     DELETE_NOTE
-} from '../actions/types';
+} from '../../actions/types';
 
-export default (state = {}, action) => {
+const initialState = {
+    notes: {}
+};
+
+export default (state = initialState, action) => {
     switch (action.type) {
         case GET_NOTE:
             return{...state, [action.payload.id]: action.payload};
