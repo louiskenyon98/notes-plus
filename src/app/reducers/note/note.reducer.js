@@ -7,11 +7,7 @@ import {
     DELETE_NOTE
 } from '../../actions/types';
 
-const initialState = {
-    notes: {}
-};
-
-export default (state = initialState, action) => {
+export default (state = {}, action) => {
     switch (action.type) {
         case GET_NOTE:
             return{...state, [action.payload.id]: action.payload};
