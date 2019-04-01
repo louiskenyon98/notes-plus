@@ -1,6 +1,7 @@
 import {
-    SHOW_MESSAGE_MODAL,
-    CLOSE_MODAL
+    SHOW_STATUS_MODAL,
+    CLOSE_MODAL,
+    SHOW_CONFIRMATION_MODAL
 } from "../../actions/types";
 
 const initialState = {
@@ -11,19 +12,21 @@ const initialState = {
 
 export default (state = initialState, action) => {
     switch (action.type) {
-        // case SHOW_MODAL:
-        //     return {
-        //         modalType: action.modalType,
-        //         modalContent: action.modalContent
-        //     };
-        case SHOW_MESSAGE_MODAL:
+        case SHOW_STATUS_MODAL:
             return {
                 show: true,
-                type: 'helloWorld',
+                type: 'status',
+                props: action.payload
+            };
+        case SHOW_CONFIRMATION_MODAL:
+            return {
+                show: true,
+                type: 'confirmation',
                 props: action.payload
             };
         case CLOSE_MODAL:
             return initialState;
-        default: return state;
+        default:
+            return state;
     }
 }

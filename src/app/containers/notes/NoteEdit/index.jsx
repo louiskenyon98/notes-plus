@@ -2,7 +2,6 @@ import _ from 'lodash';
 import React from 'react';
 import {connect} from 'react-redux';
 import {getNote, patchNote} from '../../../actions/note/notes.action';
-import {showHelloWorldModal} from '../../../actions/common/modal.action';
 import NoteFormContainer from '../NoteForm';
 import styles from '../../../../themes/style.scss';
 
@@ -38,7 +37,4 @@ const mapStateToProps = (state, ownProps) => {
     return {note: state.notes[ownProps.match.params.id]}
 };
 
-export default connect(
-    mapStateToProps,
-    {getNote, patchNote, showHelloWorldModal}
-)(NoteEditContainer)
+export default connect(mapStateToProps, {getNote, patchNote})(NoteEditContainer)
