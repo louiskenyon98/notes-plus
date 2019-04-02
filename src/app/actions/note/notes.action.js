@@ -89,13 +89,12 @@ export const patchNote = (data) => dispatch => {
     history.push('/');
 };
 
-export const deleteNote = (id) => dispatch => {
+export const deleteNote = (id, callback) => dispatch => {
     axios.delete(`/api/notes/${id}`, null)
         .then((response) => {
-            dispatch({
-                type: DELETE_NOTE,
-                payload: response.data.id
-            })
+            if (callback) {
+                callback();
+            }
         })
         .catch(() => {
             dispatch(showFailModal({

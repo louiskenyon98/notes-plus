@@ -9,8 +9,11 @@ class Modal extends React.PureComponent {
                 <React.Fragment>
                     <div className={styles.veil}/>
                     <div className={styles.modal}>
+                        {this.props.title && <h1>{this.props.title}</h1>}
                         {children}
-                        <button className={`${styles.modalButton} ui inverted primary button`} onClick={this.props.close}>close</button>
+                        <button className={`${styles.modalButton} ui inverted red button`}
+                                onClick={this.props.close}>close
+                        </button>
                     </div>
                 </React.Fragment>
             )

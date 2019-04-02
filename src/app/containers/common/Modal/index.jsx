@@ -11,7 +11,7 @@ class ModalContainer extends React.Component {
             case 'status':
                 return <StatusMessage {...this.props.modal.props}/>;
             case 'confirmation':
-                return <ConfirmationMessage />;
+                return <ConfirmationMessage {...this.props.modal.props}/>;
         }
     }
 

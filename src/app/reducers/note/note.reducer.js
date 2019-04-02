@@ -13,7 +13,7 @@ export default (state = {}, action) => {
             return{...state, [action.payload.id]: action.payload};
         case GET_NOTES:
             //Use Lodash to map returned notes (respective) id's to newly created object.
-            return {...state, ..._.mapKeys(action.payload, 'id')};
+            return _.mapKeys(action.payload, 'id');
         case POST_NOTE:
             return{...state, [action.payload.id]: action.payload};
         case PATCH_NOTE:

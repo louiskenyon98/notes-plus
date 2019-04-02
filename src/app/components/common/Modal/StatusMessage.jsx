@@ -1,5 +1,4 @@
 import React from 'react';
-//:todo rename messagemodal to message, and also create errormessage component
 export default class StatusMessage extends React.PureComponent {
 
     returnTitle() {
