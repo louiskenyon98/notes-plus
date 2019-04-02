@@ -24,6 +24,7 @@ export default (state = initialState, action) => {
                 type: 'confirmation',
                 props: action.payload
             };
+
         case CLOSE_MODAL:
             return initialState;
         default:

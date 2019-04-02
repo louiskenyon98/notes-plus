@@ -7,8 +7,6 @@ import AllNotesContainer from '../containers/notes/AllNotes'
 import NoteCreateContainer from '../containers/notes/NoteCreate';
 import NoteEditContainer from '../containers/notes/NoteEdit';
 
-import ModalContainer from "../containers/common/Modal";
-
 class Routes extends React.Component {
     render() {
         return (

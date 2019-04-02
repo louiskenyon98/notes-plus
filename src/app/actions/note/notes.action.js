@@ -81,8 +81,8 @@ export const patchNote = (data) => dispatch => {
                 payload: response.data
             });
             dispatch(showSuccessModal({
-                title: 'Note saved',
-                body: 'New note created, nice one!'
+                title: 'Note edited',
+                body: 'Look who managed to edit a note all by themselves!'
             }))
         });
     //See comment in previous action creator.
@@ -92,15 +92,15 @@ export const patchNote = (data) => dispatch => {
 export const deleteNote = (id) => dispatch => {
     axios.delete(`/api/notes/${id}`, null)
         .then((response) => {
-            // dispatch({
-            //     type: DELETE_NOTE,
-            //     payload: response.data.id
-            // })
+            dispatch({
+                type: DELETE_NOTE,
+                payload: response.data.id
+            })
         })
         .catch(() => {
             dispatch(showFailModal({
-                title: 'Error - Note not saved',
-                body: 'Sorry, could not save note, please check connection to API.'
+                title: 'Error - Note not deleted',
+                body: 'Sorry, could not delete note, please check connection to API.'
             }))
         })
 };

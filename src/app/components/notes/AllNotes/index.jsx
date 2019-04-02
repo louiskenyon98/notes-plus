@@ -2,7 +2,7 @@ import React from 'react';
 
 import Card from '../Card';
 
-class AllNotes extends React.Component {
+class AllNotes extends React.PureComponent {
     renderAll() {
         return this.props.notes.slice(0).reverse().map((note) => {
             return (
@@ -11,7 +11,7 @@ class AllNotes extends React.Component {
                     id={note.id}
                     title={note.title}
                     body={note.body}
-                    delete={this.props.deleteNote}
+                    delete={this.props.confirmDelete}
                 />
             )
         })
