@@ -1,5 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import {noteDataSelector} from '../../../selectors/note/note.selector';
 import {getNotes, deleteNote} from '../../../actions/note/notes.action';
 import {showDeleteNoteConfirmationModal} from '../../../actions/common/modal.action';
 
@@ -25,7 +26,8 @@ class AllNotesContainer extends React.Component {
 
 const mapStateToProps = (state) => {
     return {
-        data: state.notes.data
+        // data: state.notes.data
+        data: noteDataSelector(state)
     }
 };
 
