@@ -14,7 +14,7 @@ class AllNotesContainer extends React.Component {
     render() {
         return (
             <AllNotes
-                notes={this.props.notes}
+                data={this.props.data}
                 // deleteNote={this.props.deleteNote}
                 confirmDelete={this.props.showDeleteNoteConfirmationModal}
             />
@@ -25,7 +25,7 @@ class AllNotesContainer extends React.Component {
 
 const mapStateToProps = (state) => {
     return {
-        notes: Object.values(state.notes)
+        data: state.notes.data
     }
 };
 

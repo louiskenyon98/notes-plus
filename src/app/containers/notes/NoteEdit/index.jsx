@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import {connect} from 'react-redux';
-import {getNote, patchNote} from '../../../actions/note/notes.action';
+import {getNote, getNotes, patchNote} from '../../../actions/note/notes.action';
 import NoteFormContainer from '../NoteForm';
 import styles from '../../../../themes/style.scss';
 
@@ -16,10 +16,11 @@ class NoteEditContainer extends React.Component {
     }
 
     onSubmit(formValues) {
-        this.props.patchNote(formValues)
+        this.props.patchNote(formValues, this.props.getNotes)
     };
 
     render() {
+        console.log('_.pick(this.props.note, \'id\', \'title\', \'body\'',_.pick(this.props.note, 'id', 'title', 'body'));
         return (
             <div className={`col-xl-4 offset-xl-4 col-lg-6 offset-lg-3 col-sm-8 offset-sm-2 ${styles["note-creator"]}`}>
                 <h2>Edit Note</h2>
@@ -33,8 +34,15 @@ class NoteEditContainer extends React.Component {
     }
 }
 
-const mapStateToProps = (state, ownProps) => {
-    return {note: state.notes[ownProps.match.params.id]}
+NoteEditContainer.defaultProps = {
+    note: {}
 };
 
-export default connect(mapStateToProps, {getNote, patchNote})(NoteEditContainer)
+
+const mapStateToProps = (state) => {
+    return {
+        note: state.notes.edit
+    }
+};
+
+export default connect(mapStateToProps, {getNote, getNotes, patchNote})(NoteEditContainer)

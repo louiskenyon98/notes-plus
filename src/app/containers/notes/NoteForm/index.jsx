@@ -45,5 +45,6 @@ const validate = (formValues) => {
 };
 export default reduxForm({
     form: 'noteForm',
-    validate
+    validate,
+    enableReinitialize:true
 })(NoteFormContainer);

@@ -4,7 +4,7 @@ import Card from '../Card';
 
 class AllNotes extends React.PureComponent {
     renderAll() {
-        return this.props.notes.slice(0).reverse().map((note) => {
+        return this.props.data.map((note) => {
             return (
                 <Card
                     key={note.id}

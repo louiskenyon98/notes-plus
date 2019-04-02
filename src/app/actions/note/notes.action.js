@@ -53,13 +53,12 @@ export const getNote = (id) => dispatch => {
         })
 };
 //Action creator to post a new note
-export const postNote = (data) => dispatch => {
+export const postNote = (data, callback) => dispatch => {
     axios.post('/api/notes/', data)
-        .then((response) => {
-            dispatch({
-                type: POST_NOTE,
-                payload: response.data
-            });
+        .then(() => {
+            if (callback) {
+                callback();
+            }
             dispatch(showSuccessModal({
                 title: 'Note saved',
                 body: 'New note created, nice one!'
@@ -73,13 +72,12 @@ export const postNote = (data) => dispatch => {
     //Programmatic navigation of user back to AllNotes after form submission is completed.
     history.push('/');
 };
-export const patchNote = (data) => dispatch => {
+export const patchNote = (data, callback) => dispatch => {
     axios.patch('/api/notes/', data)
-        .then((response) => {
-            dispatch({
-                type: PATCH_NOTE,
-                payload: response.data
-            });
+        .then(() => {
+            if (callback) {
+                callback();
+            }
             dispatch(showSuccessModal({
                 title: 'Note edited',
                 body: 'Look who managed to edit a note all by themselves!'
@@ -91,7 +89,7 @@ export const patchNote = (data) => dispatch => {
 
 export const deleteNote = (id, callback) => dispatch => {
     axios.delete(`/api/notes/${id}`, null)
-        .then((response) => {
+        .then(() => {
             if (callback) {
                 callback();
             }

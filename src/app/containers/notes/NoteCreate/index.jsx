@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {postNote} from '../../../actions/note/notes.action';
+import {getNotes, postNote} from '../../../actions/note/notes.action';
 import NoteFormContainer from '../NoteForm';
 import styles from '../../../../themes/style.scss';
 
@@ -12,7 +12,7 @@ class NoteCreateContainer extends React.Component {
     }
 
     onSubmit(formValues) {
-        this.props.postNote(formValues);
+        this.props.postNote(formValues, this.props.getNotes);
     };
 
     render() {
@@ -30,5 +30,5 @@ class NoteCreateContainer extends React.Component {
 
 export default connect(
     null,
-    {postNote}
+    {postNote, getNotes}
 )(NoteCreateContainer);
