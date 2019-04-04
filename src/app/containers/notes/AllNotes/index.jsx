@@ -14,11 +14,9 @@ class AllNotesContainer extends React.Component {
     }
 
     render() {
-        console.log(this.props.notes)
         return (
             <AllNotes
                 data={this.props.notes}
-                // deleteNote={this.props.deleteNote}
                 confirmDelete={this.props.showDeleteNoteConfirmationModal}
             />
         )
