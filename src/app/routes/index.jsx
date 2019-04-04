@@ -1,6 +1,7 @@
 import React from 'react';
 import {Router, Route, Switch} from 'react-router-dom';
-import Navigation from '../components/common/Navigation';
+// import Navigation from '../components/common/Navigation';
+import NavigationContainer from '../containers/common/Navigation';
 import history from '../history';
 
 import AllNotesContainer from '../containers/notes/AllNotes'
@@ -12,7 +13,8 @@ class Routes extends React.Component {
         return (
             <Router history={history}>
                 <React.Fragment>
-                    <Navigation/>
+                    {/*<Navigation/>*/}
+                    <NavigationContainer/>
                     <Switch>
                         <Route path="/edit/:id" component={NoteEditContainer}/>
                         <Route path="/new" component={NoteCreateContainer}/>

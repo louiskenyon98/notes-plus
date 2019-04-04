@@ -1,11 +1,14 @@
 import {
     GET_NOTE,
-    GET_NOTES
+    GET_NOTES,
+    ONCHANGE_FILTER_VALUE
 } from '../../actions/types';
+import {LAST_CREATED} from "../../config/filterOptions";
 
 const initialState = {
     data: [],
-    edit: {}
+    edit: {},
+    filterOption: LAST_CREATED
 };
 
 export default (state = initialState, action) => {
@@ -15,6 +18,8 @@ export default (state = initialState, action) => {
             return {...state, data: action.payload};
         case GET_NOTE:
             return {...state, edit: action.payload};
+        case ONCHANGE_FILTER_VALUE:
+            return {...state, filterOption: action.payload};
         default:
             return state;
     }

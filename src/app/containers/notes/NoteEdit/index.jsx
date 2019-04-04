@@ -20,7 +20,6 @@ class NoteEditContainer extends React.Component {
     };
 
     render() {
-        console.log('_.pick(this.props.note, \'id\', \'title\', \'body\'',_.pick(this.props.note, 'id', 'title', 'body'));
         return (
             <div className={`col-xl-4 offset-xl-4 col-lg-6 offset-lg-3 col-sm-8 offset-sm-2 ${styles["note-creator"]}`}>
                 <h2>Edit Note</h2>

@@ -1,5 +1,8 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import {filterOptions} from '../../../config/filterOptions';
+import Select from '../formFields/Select';
+
 import styles from '../../../../themes/style.scss';
 
 class Navigation extends React.PureComponent {
@@ -8,15 +11,19 @@ class Navigation extends React.PureComponent {
 
             <div className={`ui menu ${styles.nav}`}>
                 <Link to="/" className={`header item ${styles.title}`}>notes+</Link>
+                {/*<div className="item">*/}
+                    {/*<Select/>*/}
+                {/*</div>*/}
+                <Select
+                    options={filterOptions}
+                    value={this.props.filterOptionValue}
+                    onChange={this.props.onChangeFilterValue}
+                />
+
+
+                {/*<option></option>*/}
+                {/*<option>Last edited</option>*/}
                 <div className="link item right">
-                    <div className="ui simple dropdown item">
-                        Filter Notes
-                        <i className="dropdown icon"></i>
-                        <div className="menu">
-                            <div className="item">Most recent created first</div>
-                            <div className="item">Most recent edit first</div>
-                        </div>
-                    </div>
                     <Link to="/new">
                         <div className="ui inverted primary button">New Note</div>
                     </Link>

@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {closeModal} from '../../../actions/common/modal.action';
-import Modal from '../../../components/common/Modal';
+import Modal from '../../../components/common/Modal/Modal';
 import StatusMessage from "../../../components/common/Modal/StatusMessage";
 import ConfirmationMessage from "../../../components/common/Modal/ConfirmationMessage";
 

@@ -3,7 +3,6 @@ import styles from '../../../../themes/style.scss';
 
 export default class ConfirmationMessage extends React.PureComponent {
     render() {
-        console.log(this.props.accept);
         return (
             <React.Fragment>
                 <h1>Is you sure fam?</h1>
