@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Select render options should render a select component with multiple options 1`] = `
+<select
+  onChange={[Function]}
+  value="foo"
+>
+  <option
+    key="hello"
+    value="hello"
+  >
+    Hello World
+  </option>
+  <option
+    key="foo"
+    value="foo"
+  >
+    Foo Bar
+  </option>
+  <option
+    key="mike"
+    value="mike"
+  >
+    Big Mike
+  </option>
+</select>
+`;
+
+exports[`Select render options should return no options when no options are passed in 1`] = `
+<select
+  onChange={[Function]}
+  value="foo"
+/>
+`;
+
+exports[`Select should render a select component with multiple options 1`] = `
+<select
+  onChange={[Function]}
+  value="foo"
+>
+  <option
+    key="hello"
+    value="hello"
+  >
+    Hello World
+  </option>
+  <option
+    key="foo"
+    value="foo"
+  >
+    Foo Bar
+  </option>
+  <option
+    key="mike"
+    value="mike"
+  >
+    Big Mike
+  </option>
+</select>
+`;
+
+exports[`Select should return no options when no options are passed in 1`] = `
+<select
+  onChange={[Function]}
+  value="foo"
+/>
+`;

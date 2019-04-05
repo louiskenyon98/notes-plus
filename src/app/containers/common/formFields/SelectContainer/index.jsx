@@ -1,9 +1,9 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import Select from '../../../components/common/formFields/Select';
-import {filterOptions} from '../../../config/filterOptions';
+import Select from '../../../../components/common/formFields/Select';
+import {filterOptions} from '../../../../config/filterOptions';
 
-import {onChangeFilterValue} from '../../../actions/filterValues/index.actions';
+import {onChangeFilterValue} from '../../../../actions/filterValues/index.actions';
 
 
 class SelectContainer extends React.Component {

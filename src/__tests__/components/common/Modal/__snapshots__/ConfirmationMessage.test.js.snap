@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ConfirmationMessage render body should render a component with body 1`] = `
+<Fragment>
+  <h1>
+    Is you sure fam?
+  </h1>
+  Confirmation message body
+  <button
+    className="modalButton ui inverted primary button"
+    onClick={[MockFunction]}
+  >
+    YES
+  </button>
+</Fragment>
+`;
+
+exports[`ConfirmationMessage render body should render no body when no body is passed in 1`] = `
+<Fragment>
+  <h1>
+    Is you sure fam?
+  </h1>
+  <button
+    className="modalButton ui inverted primary button"
+    onClick={[MockFunction]}
+  >
+    YES
+  </button>
+</Fragment>
+`;
+
+exports[`ConfirmationMessage should render a component with body 1`] = `
+<Fragment>
+  <h1>
+    Is you sure fam?
+  </h1>
+  Confirmation message body
+  <button
+    className="modalButton ui inverted primary button"
+    onClick={[MockFunction]}
+  >
+    YES
+  </button>
+</Fragment>
+`;
+
+exports[`ConfirmationMessage should render no body when no body is passed in 1`] = `
+<Fragment>
+  <h1>
+    Is you sure fam?
+  </h1>
+  <button
+    className="modalButton ui inverted primary button"
+    onClick={[MockFunction]}
+  >
+    YES
+  </button>
+</Fragment>
+`;
