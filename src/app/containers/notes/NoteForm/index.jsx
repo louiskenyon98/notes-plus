@@ -5,18 +5,20 @@ import {TextArea, TextInput} from '../../../components/common/reduxFormFields/in
 import styles from '../../../../themes/style.scss';
 import {Link} from "react-router-dom";
 
-class NoteFormContainer extends React.Component {
+export class NoteFormContainer extends React.Component {
     constructor(props) {
         super(props);
         this.onSubmit = this.onSubmit.bind(this);
     }
 
-    onSubmit (formValues) {
+    onSubmit(formValues) {
         this.props.onSubmit(formValues)
     };
+
     render() {
         return (
-            <form onSubmit={this.props.handleSubmit(this.onSubmit)} className={`note-editor-form ui form error ${styles.form}`}>
+            <form onSubmit={this.props.handleSubmit(this.onSubmit)}
+                  className={`note-editor-form ui form error ${styles.form}`}>
                 <Field
                     name='title'
                     component={TextInput}
@@ -28,17 +30,20 @@ class NoteFormContainer extends React.Component {
                     label='Enter Note Body...'
                 />
                 <button className={`ui right floated button`}>Submit</button>
-                <Link to="/"><button className={`ui button`}>Cancel</button></Link>
+                <Link to="/">
+                    <button className={`ui button`}>Cancel</button>
+                </Link>
             </form>
         )
     }
 }
-const validate = (formValues) => {
+
+export const validate = (formValues) => {
     const errors = {};
-    if(!formValues.title) {
+    if (!formValues.title) {
         errors.title = 'You must enter a title for your note'
     }
-    if(!formValues.body){
+    if (!formValues.body) {
         errors.body = 'You must enter a body for your note'
     }
     return errors;
@@ -46,5 +51,5 @@ const validate = (formValues) => {
 export default reduxForm({
     form: 'noteForm',
     validate,
-    enableReinitialize:true
+    enableReinitialize: true
 })(NoteFormContainer);

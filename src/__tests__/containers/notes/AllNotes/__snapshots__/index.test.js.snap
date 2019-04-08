@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AllNotesContainer render should render AllNotes component with props 1`] = `
+<AllNotes
+  confirmDelete={[MockFunction]}
+  data={
+    Array [
+      Object {
+        "body": "the first body",
+        "id": 90,
+        "title": "title number 1",
+      },
+      Object {
+        "body": "the second body",
+        "id": 91,
+        "title": "title number 2",
+      },
+    ]
+  }
+/>
+`;
+
+exports[`AllNotesContainer render should render allnotes component with props 1`] = `
+<AllNotes
+  confirmDelete={[MockFunction]}
+  data={
+    Array [
+      Object {
+        "body": "the first body",
+        "id": 90,
+        "title": "title number 1",
+      },
+      Object {
+        "body": "the second body",
+        "id": 91,
+        "title": "title number 2",
+      },
+    ]
+  }
+/>
+`;

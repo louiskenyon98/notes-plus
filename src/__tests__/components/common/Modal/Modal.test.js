@@ -15,24 +15,28 @@ describe('Modal', () => {
         }
     });
 
-    it('should render a component with children', () => {
-        expect(wrapper()).toMatchSnapshot();
+    describe('render', () => {
+        it('should render a component with children', () => {
+            expect(wrapper()).toMatchSnapshot();
+        });
+
+        it('should not render when show equals false', () => {
+            props.show = false;
+            expect(wrapper()).toMatchSnapshot();
+        });
+
+        it('should not render a title when one is not passed in', () => {
+            props.title = '';
+            expect(wrapper()).toMatchSnapshot();
+        });
     });
 
-    it('should not render when show equals false', () => {
-        props.show = false;
-        expect(wrapper()).toMatchSnapshot();
+    describe('functionality', () => {
+        it('should call close onClick', () => {
+            expect(props.close).not.toHaveBeenCalled();
+            expect(props.close).toHaveBeenCalledTimes(0);
+            wrapper().find('button').first().simulate('click');
+            expect(props.close).toHaveBeenCalledTimes(1);
+        })
     });
-
-    it('should not render a title when one is not passed in', () => {
-        props.title = '';
-        expect(wrapper()).toMatchSnapshot();
-    });
-
-    it('should call close onClick', () => {
-        expect(props.close).not.toHaveBeenCalled();
-        expect(props.close).toHaveBeenCalledTimes(0);
-        wrapper().find('button').first().simulate('click');
-        expect(props.close).toHaveBeenCalledTimes(1);
-    })
 });

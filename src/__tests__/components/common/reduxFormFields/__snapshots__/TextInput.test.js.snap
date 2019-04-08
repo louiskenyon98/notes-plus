@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextInput render should render inp[ut with placeholder and text in error state if touched and error = true 1`] = `
+<div
+  className="field error form-body-field-wrapper"
+>
+  <input
+    autoComplete="off"
+    className="form-title-field"
+    foo="bar"
+    placeholder="Placeholder string"
+  />
+  <Error
+    message="Error string"
+  />
+</div>
+`;
+
+exports[`TextInput render should render input with placeholder and text in error state if touched and error = true 1`] = `
+<div
+  className="field error form-body-field-wrapper"
+>
+  <input
+    autoComplete="off"
+    className="form-title-field"
+    foo="bar"
+    placeholder="Placeholder string"
+  />
+  <Error
+    message="Error string"
+  />
+</div>
+`;

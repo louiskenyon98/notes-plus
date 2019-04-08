@@ -5,7 +5,7 @@ import Modal from '../../../components/common/Modal/Modal';
 import StatusMessage from "../../../components/common/Modal/StatusMessage";
 import ConfirmationMessage from "../../../components/common/Modal/ConfirmationMessage";
 
-class ModalContainer extends React.Component {
+export class ModalContainer extends React.Component {
     returnModal() {
         switch (this.props.modal.type) {
             case 'status':

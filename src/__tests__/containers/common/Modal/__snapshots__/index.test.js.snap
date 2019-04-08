@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ModalContainer render should not render component when show = false 1`] = `
+<Modal
+  close={[MockFunction]}
+  show={false}
+>
+  <StatusMessage
+    foo="bar"
+  />
+</Modal>
+`;
+
+exports[`ModalContainer render should render  when type = status 1`] = `
+<Modal
+  close={[MockFunction]}
+  show={true}
+>
+  <StatusMessage
+    foo="bar"
+  />
+</Modal>
+`;
+
+exports[`ModalContainer render should render component when show = true 1`] = `
+<Modal
+  close={[MockFunction]}
+  show={true}
+>
+  <StatusMessage
+    foo="bar"
+  />
+</Modal>
+`;
+
+exports[`ModalContainer render should render nothing when no type is supplied 1`] = `
+<Modal
+  close={[MockFunction]}
+  show={true}
+/>
+`;
+
+exports[`ModalContainer render should render the ConfirmationMessage component when type = confirmation 1`] = `
+<Modal
+  close={[MockFunction]}
+  show={true}
+>
+  <ConfirmationMessage
+    foo="bar"
+  />
+</Modal>
+`;
+
+exports[`ModalContainer render should render the StatusMessage component when type = status 1`] = `
+<Modal
+  close={[MockFunction]}
+  show={true}
+>
+  <StatusMessage
+    foo="bar"
+  />
+</Modal>
+`;
+
+exports[`ModalContainer render should set show prop to false when show = false 1`] = `
+<Modal
+  close={[MockFunction]}
+  show={false}
+>
+  <StatusMessage
+    foo="bar"
+  />
+</Modal>
+`;
+
+exports[`ModalContainer render should set show prop to true when show = true 1`] = `
+<Modal
+  close={[MockFunction]}
+  show={true}
+>
+  <StatusMessage
+    foo="bar"
+  />
+</Modal>
+`;

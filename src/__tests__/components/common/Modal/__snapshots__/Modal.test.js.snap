@@ -1,5 +1,52 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Modal render should not render a title when one is not passed in 1`] = `
+<Fragment>
+  <div
+    className="veil"
+  />
+  <div
+    className="modal"
+  >
+    <div>
+      Hello world
+    </div>
+    <button
+      className="modalButton ui inverted red button"
+      onClick={[MockFunction]}
+    >
+      close
+    </button>
+  </div>
+</Fragment>
+`;
+
+exports[`Modal render should not render when show equals false 1`] = `""`;
+
+exports[`Modal render should render a component with children 1`] = `
+<Fragment>
+  <div
+    className="veil"
+  />
+  <div
+    className="modal"
+  >
+    <h1>
+      This is a modal title
+    </h1>
+    <div>
+      Hello world
+    </div>
+    <button
+      className="modalButton ui inverted red button"
+      onClick={[MockFunction]}
+    >
+      close
+    </button>
+  </div>
+</Fragment>
+`;
+
 exports[`Modal should not render a title when one is not passed in 1`] = `
 <Fragment>
   <div

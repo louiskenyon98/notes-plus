@@ -5,7 +5,7 @@ import NoteFormContainer from '../NoteForm';
 import styles from '../../../../themes/style.scss';
 
 
-class NoteCreateContainer extends React.Component {
+export class NoteCreateContainer extends React.Component {
     constructor(props) {
         super(props);
         this.onSubmit = this.onSubmit.bind(this);
