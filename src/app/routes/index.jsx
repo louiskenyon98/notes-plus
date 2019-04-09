@@ -7,7 +7,7 @@ import AllNotesContainer from '../containers/notes/AllNotes'
 import NoteCreateContainer from '../containers/notes/NoteCreate';
 import NoteEditContainer from '../containers/notes/NoteEdit';
 
-class Routes extends React.Component {
+export class Routes extends React.Component {
     render() {
         return (
             <Router history={history}>

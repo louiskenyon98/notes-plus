@@ -3,7 +3,7 @@ import {createSelector} from 'reselect';
 const noteDataSelector = state => state.notes.data;
 const filterOptionsSelector = state => state.notes.filterOption;
 
-const getAllNotesSelector = createSelector(
+export const getAllNotesSelector = createSelector(
     noteDataSelector,
     filterOptionsSelector,
     (noteData, filterOptionValue) => {
@@ -12,9 +12,4 @@ const getAllNotesSelector = createSelector(
             notes: [...noteData]
         }
     });
-
-export {
-    noteDataSelector,
-    getAllNotesSelector
-}
 

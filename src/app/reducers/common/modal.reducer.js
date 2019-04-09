@@ -2,7 +2,7 @@ import {
     SHOW_STATUS_MODAL,
     CLOSE_MODAL,
     SHOW_CONFIRMATION_MODAL
-} from "../../actions/types";
+} from '../../actions/types';
 
 const initialState = {
     show: false,
