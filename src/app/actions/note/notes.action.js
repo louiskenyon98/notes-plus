@@ -1,7 +1,7 @@
 import axios from 'axios';
 import history from '../../history';
 import {showFailModal, showSuccessModal} from '../common/modal.action';
-import {GET_NOTE, GET_NOTES, POST_NOTE, PATCH_NOTE, DELETE_NOTE} from '../types';
+import {GET_NOTE, GET_NOTES} from '../types';
 
 
 //Action creator to get all notes.
