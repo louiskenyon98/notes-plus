@@ -15,41 +15,41 @@ jest.mock('../../../app/actions/common/modal.action', () => ({
     showFailModal: jest.fn(),
     showSuccessModal: jest.fn()
 }));
+beforeEach(() => {
+    // store.clearActions();
+    jest.clearAllMocks();
+});
 
 describe('notes actions', () => {
-    beforeEach(() => {
-        // store.clearActions();
-        jest.clearAllMocks();
-    });
+
     describe('getNotes', () => {
         describe('promise resolved', () => {
             it('should dispatch GET_NOTES', async () => {
-                mock.onGet('/api/notes').reply(200, [
-                    {
-                        "id": 91,
-                        "title": "noteTitle1",
-                        "body": "noteBody1",
-                        "createdAt": "2019-04-04T10:21:10.289Z",
-                        "updatedAt": "2019-04-04T10:21:10.289Z"
-                    },
-                    {
-                        "id": 89,
-                        "title": "noteTitle2",
-                        "body": "noteBody2",
-                        "createdAt": "2019-04-03T12:00:42.118Z",
-                        "updatedAt": "2019-04-04T12:59:06.070Z"
-                    },
-                    {
-                        "id": 88,
-                        "title": "noteTitle3",
-                        "body": "noteBody3",
-                        "createdAt": "2019-04-03T12:00:33.574Z",
-                        "updatedAt": "2019-04-04T10:21:23.950Z"
-                    }
-                ]);
+                mock.onGet('/api/notes/').reply(200, [
+                        {
+                            "id": 91,
+                            "title": "noteTitle1",
+                            "body": "noteBody1",
+                            "createdAt": "2019-04-04T10:21:10.289Z",
+                            "updatedAt": "2019-04-04T10:21:10.289Z"
+                        },
+                        {
+                            "id": 89,
+                            "title": "noteTitle2",
+                            "body": "noteBody2",
+                            "createdAt": "2019-04-03T12:00:42.118Z",
+                            "updatedAt": "2019-04-04T12:59:06.070Z"
+                        },
+                        {
+                            "id": 88,
+                            "title": "noteTitle3",
+                            "body": "noteBody3",
+                            "createdAt": "2019-04-03T12:00:33.574Z",
+                            "updatedAt": "2019-04-04T10:21:23.950Z"
+                        }
+                    ]);
                 const store = mockStore();
                 await store.dispatch(getNotes());
-                console.log(store.getActions());
                 expect(store.getActions()).toHaveLength(1);
                 expect(store.getActions()[0]).toEqual({
                     "type": "GET_NOTES",
@@ -77,6 +77,11 @@ describe('notes actions', () => {
                         }
                     ]
                 })
+            })
+        });
+        describe('promise rejected', () => {
+            it('should dispatch showFailModal', async () => {
+                mock.onGet('/api/notes/')
             })
         })
     })

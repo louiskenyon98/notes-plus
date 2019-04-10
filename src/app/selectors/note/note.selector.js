@@ -13,7 +13,7 @@ export const getAllNotesSelector = createSelector(
             notes = noteData.sort((a, b) => new Date(b[filterOptionValue]) - new Date(a[filterOptionValue]));
         }
         return {
-            notes,
+            notes: [...notes],
         }
     });
 

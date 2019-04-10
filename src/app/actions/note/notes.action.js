@@ -22,14 +22,19 @@ import {GET_NOTE, GET_NOTES} from '../types';
 // };
 
 export const getNotes = () => dispatch => {
+    console.log('pre-get');
     axios.get('/api/notes/')
         .then((response) => {
+            console.log('then');
+            console.log('data', response.data);
             dispatch({
                 type: GET_NOTES,
                 payload: response.data
             });
         })
         .catch(() => {
+            console.log('catch');
+
             dispatch(showFailModal({
                 title: 'Error - could not retrieve notes',
                 body: 'Note lookup failed, please try again later.'
