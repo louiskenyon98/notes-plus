@@ -24,7 +24,7 @@ describe('notes actions', () => {
 
     describe('getNotes', () => {
         describe('promise resolved', () => {
-            it('should dispatch GET_NOTES', async () => {
+            it('should dispatch GET_NOTES',async () => {
                 mock.onGet('/api/notes/').reply(200, [
                         {
                             "id": 91,
@@ -50,6 +50,7 @@ describe('notes actions', () => {
                     ]);
                 const store = mockStore();
                 await store.dispatch(getNotes());
+                console.log('anything');
                 expect(store.getActions()).toHaveLength(1);
                 expect(store.getActions()[0]).toEqual({
                     "type": "GET_NOTES",

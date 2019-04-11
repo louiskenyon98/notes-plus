@@ -23,7 +23,7 @@ import {GET_NOTE, GET_NOTES} from '../types';
 
 export const getNotes = () => dispatch => {
     console.log('pre-get');
-    axios.get('/api/notes/')
+    return axios.get('/api/notes/')
         .then((response) => {
             console.log('then');
             console.log('data', response.data);
