@@ -99,8 +99,6 @@ describe('getAllNotesSelector', () => {
         describe('undefined', () => {
             it('should return WHATEVER', () => {
                 state.notes.data = undefined;
-
-                console.log(state);
                 const expected = {
                     notes: []
                 };

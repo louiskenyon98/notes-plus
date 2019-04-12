@@ -27,7 +27,6 @@ describe('Select', () => {
         describe('options', () => {
             it('should render a select component with multiple options', () => {
                 expect(wrapper()).toMatchSnapshot();
-                // console.log(wrapper().debug());
             });
 
             it('should return no options when no options are passed in', () => {

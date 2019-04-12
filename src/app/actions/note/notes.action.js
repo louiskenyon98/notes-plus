@@ -22,19 +22,14 @@ import {GET_NOTE, GET_NOTES} from '../types';
 // };
 
 export const getNotes = () => dispatch => {
-    console.log('pre-get');
     return axios.get('/api/notes/')
         .then((response) => {
-            console.log('then');
-            console.log('data', response.data);
             dispatch({
                 type: GET_NOTES,
                 payload: response.data
             });
         })
         .catch(() => {
-            console.log('catch');
-
             dispatch(showFailModal({
                 title: 'Error - could not retrieve notes',
                 body: 'Note lookup failed, please try again later.'
@@ -44,7 +39,7 @@ export const getNotes = () => dispatch => {
 
 //Action creator to get a single note.
 export const getNote = (id) => dispatch => {
-    axios.get(`/api/notes/${id}`)
+    return axios.get(`/api/notes/${id}`)
         .then((response) => {
             dispatch({
                 type: GET_NOTE,
@@ -59,7 +54,7 @@ export const getNote = (id) => dispatch => {
 };
 //Action creator to post a new note
 export const postNote = (data, callback) => dispatch => {
-    axios.post('/api/notes/', data)
+    return axios.post('/api/notes/', data)
         .then(() => {
             if (callback) {
                 callback();
@@ -67,18 +62,20 @@ export const postNote = (data, callback) => dispatch => {
             dispatch(showSuccessModal({
                 title: 'Note saved',
                 body: 'New note created, nice one!'
-            }))
+            }));
+            history.push('/');
         })
         .catch(() => {
             dispatch(showFailModal({
                 body: 'Failed to create a new note, please try again later.'
             }));
+            history.push('/');
         });
     //Programmatic navigation of user back to AllNotes after form submission is completed.
-    history.push('/');
+
 };
 export const patchNote = (data, callback) => dispatch => {
-    axios.patch('/api/notes/', data)
+    return axios.patch('/api/notes/', data)
         .then(() => {
             if (callback) {
                 callback();
@@ -86,14 +83,22 @@ export const patchNote = (data, callback) => dispatch => {
             dispatch(showSuccessModal({
                 title: 'Note edited',
                 body: 'Look who managed to edit a note all by themselves!'
-            }))
-        });
+            }));
+            history.push('/');
+        })
+        .catch(() => {
+            dispatch(showFailModal({
+                title: 'Error - Unable to edit note',
+                body: 'Sorry, could not edit note, please check connection to API.'
+            }));
+            history.push('/');
+        })
     //See comment in previous action creator.
-    history.push('/');
+
 };
 
 export const deleteNote = (id, callback) => dispatch => {
-    axios.delete(`/api/notes/${id}`, null)
+    return axios.delete(`/api/notes/${id}`, null)
         .then(() => {
             if (callback) {
                 callback();

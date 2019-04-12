@@ -14,7 +14,6 @@ export class AllNotesContainer extends React.Component {
     }
 
     render() {
-        console.log(this.props);
         return (
             <AllNotes
                 data={this.props.notes}
