@@ -1,6 +1,11 @@
 import React from 'react';
 // import {showFailModal, showSuccessModal, showFailModal, showDeleteNoteConfirmationModal, showConfirmationModal, closeModal} from '../../../app/actions/common/modal.action';
-import {showSuccessModal, showFailModal, showDeleteNoteConfirmationModal, showConfirmationModal} from '../../../app/actions/common/modal.action';
+import {
+    showSuccessModal,
+    showFailModal,
+    showDeleteNoteConfirmationModal,
+    showConfirmationModal
+} from '../../../app/actions/common/modal.action';
 import {getNotes, deleteNote} from '../../../app/actions/note/notes.action';
 import {
     CLOSE_MODAL, SHOW_CONFIRMATION_MODAL,
@@ -9,14 +14,12 @@ import {
 
 jest.mock('../../../app/actions/note/notes.action', () => ({
     getNotes: jest.fn(() => 'getNotes called'),
-    deleteNote: jest.fn(() => 'deleteNote called')
+    deleteNote: jest.fn(() => 'deleteNote called'),
 }));
 
 let dispatch = jest.fn((objOrFunc) => {
     return typeof objOrFunc === 'function' ? objOrFunc(dispatch) : objOrFunc
 });
-
-let mockCallBack = jest.fn();
 
 const details = {
     title: 'Details Title',
@@ -55,8 +58,24 @@ describe('modal actions', () => {
         });
     });
     describe('showDeleteNoteConfirmationModal', () => {
-        dispatch(showDeleteNoteConfirmationModal(91));
-        expect(dispatch).toHaveBeenCalledWith(showConfirmationModal());
-        //:todo i am currently testing this part
+        it('change this', () => {
+            const expected = {
+                type: SHOW_CONFIRMATION_MODAL,
+                payload: {
+                    body: 'Do you want to delete this note',
+                    accept: {
+                        label: 'YES',
+                        callback: jest.fn(dispatch())
+                    },
+                    decline: {
+                        label: 'NO',
+                        callback: jest.fn()
+                    }
+                }
+            };
+            dispatch(showDeleteNoteConfirmationModal(91));
+            // expect(dispatch).toHaveBeenCalledTimes(2);
+            expect(dispatch).toHaveBeenNthCalledWith(2, expected);
+        });
     })
 });

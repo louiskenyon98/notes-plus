@@ -1,6 +1,6 @@
 import axios from 'axios';
 import history from '../../history';
-import {showFailModal, showSuccessModal} from '../common/modal.action';
+import {closeModal, showFailModal, showSuccessModal} from '../common/modal.action';
 import {GET_NOTE, GET_NOTES} from '../types';
 
 
@@ -110,4 +110,11 @@ export const deleteNote = (id, callback) => dispatch => {
                 body: 'Sorry, could not delete note, please check connection to API.'
             }))
         })
+};
+
+export const deleteCallback = (id) => dispatch => {
+    dispatch(deleteNote(id, () => {
+        dispatch(getNotes());
+        dispatch(closeModal());
+    }));
 };
