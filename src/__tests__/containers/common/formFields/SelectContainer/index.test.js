@@ -3,8 +3,6 @@ import {shallow} from 'enzyme';
 import {LAST_CREATED} from '../../../../../app/config/filterOptions';
 import {SelectContainer} from '../../../../../app/containers/common/formFields/SelectContainer/index';
 
-//:todo Get Mike to check this one.
-
 describe('SelectContainer', () => {
     let props = {};
     let wrapper = () => shallow(<SelectContainer {...props}/>);

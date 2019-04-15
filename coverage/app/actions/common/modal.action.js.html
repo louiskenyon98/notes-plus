@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">83.33% </span>
+        <span class="strong">0% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>10/12</span>
+        <span class='fraction'>0/14</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -30,18 +30,18 @@
         <span class='fraction'>0/0</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">71.43% </span>
+        <span class="strong">0% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>5/7</span>
+        <span class='fraction'>0/7</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">85.71% </span>
+        <span class="strong">0% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>6/7</span>
+        <span class='fraction'>0/9</span>
       </div>
     </div>
   </div>
-  <div class='status-line high'></div>
+  <div class='status-line low'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet">1
 2
@@ -91,7 +91,15 @@
 46
 47
 48
-49</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+49</td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -99,7 +107,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -107,16 +115,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -131,23 +131,23 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import {
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >import {</span>
     CLOSE_MODAL, SHOW_CONFIRMATION_MODAL,
     SHOW_STATUS_MODAL
 } from '../types';
-import {deleteCallback} from '../../actions/note/notes.action';
+<span class="cstat-no" title="statement not covered" >import {deleteCallback} from '../../actions/note/notes.action';</span>
 &nbsp;
 &nbsp;
 //Action, not action creator.
-export const showSuccessModal = (details) =&gt; ({
+export const <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >showSuccessModal = <span class="cstat-no" title="statement not covered" >(</span>details) =&gt; ({</span></span>
     type: SHOW_STATUS_MODAL,
     payload: {
         status: 'success',
@@ -155,7 +155,7 @@ export const showSuccessModal = (details) =&gt; ({
     }
 });
 //Object passed in (details), expecting body and title within object.
-export const showFailModal = (details) =&gt; ({
+export const <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >showFailModal = <span class="cstat-no" title="statement not covered" >(</span>details) =&gt; ({</span></span>
     type: SHOW_STATUS_MODAL,
     payload: {
         status: 'fail',
@@ -163,13 +163,13 @@ export const showFailModal = (details) =&gt; ({
     }
 });
 &nbsp;
-export const showDeleteNoteConfirmationModal = (id) =&gt; dispatch =&gt; {
-    dispatch(
+export const <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >showDeleteNoteConfirmationModal = <span class="cstat-no" title="statement not covered" >(</span>id) =&gt; <span class="fstat-no" title="function not covered" >dispatch =&gt; </span>{</span></span>
+<span class="cstat-no" title="statement not covered" >    dispatch(</span>
         showConfirmationModal({
             body: 'Do you want to delete this note',
             accept: {
                 label: 'YES',
-                callback: <span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >dispatch(deleteCallback(id))</span>
+                callback: <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >() =&gt; dispatch(deleteCallback(id))</span></span>
             },
             decline: {
                 label: 'NO',
@@ -179,12 +179,12 @@ export const showDeleteNoteConfirmationModal = (id) =&gt; dispatch =&gt; {
     )
 };
 &nbsp;
-export const showConfirmationModal = (details) =&gt; ({
+export const <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >showConfirmationModal = <span class="cstat-no" title="statement not covered" >(</span>details) =&gt; ({</span></span>
     type: SHOW_CONFIRMATION_MODAL,
     payload: details
 });
 &nbsp;
-export const closeModal = <span class="fstat-no" title="function not covered" >()</span> =&gt; (<span class="cstat-no" title="statement not covered" >{</span>
+export const <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >closeModal = <span class="cstat-no" title="statement not covered" >(</span>) =&gt; ({</span></span>
     type: CLOSE_MODAL,
 });
 &nbsp;</pre></td></tr>
@@ -193,7 +193,7 @@ export const closeModal = <span class="fstat-no" title="function not covered" >(
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Apr 15 2019 14:58:54 GMT+0100 (GMT Daylight Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Apr 15 2019 16:10:06 GMT+0100 (GMT Daylight Time)
 </div>
 </div>
 <script src="..\..\..\prettify.js"></script>

@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SelectContainer Integration Test should render Select component with options, a value and an onChange function 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <Connect(SelectContainer)>
+    <SelectContainer
+      filterOption="createdAt"
+      onChangeFilterValue={[Function]}
+    >
+      <Select
+        onChange={[Function]}
+        options={
+          Array [
+            Object {
+              "label": "Last created",
+              "value": "createdAt",
+            },
+            Object {
+              "label": "Last edited",
+              "value": "updatedAt",
+            },
+          ]
+        }
+        value="createdAt"
+      >
+        <select
+          onChange={[Function]}
+          value="createdAt"
+        >
+          <option
+            key="createdAt"
+            value="createdAt"
+          >
+            Last created
+          </option>
+          <option
+            key="updatedAt"
+            value="updatedAt"
+          >
+            Last edited
+          </option>
+        </select>
+      </Select>
+    </SelectContainer>
+  </Connect(SelectContainer)>
+</Provider>
+`;
