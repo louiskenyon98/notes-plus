@@ -2,7 +2,7 @@ import {
     CLOSE_MODAL, SHOW_CONFIRMATION_MODAL,
     SHOW_STATUS_MODAL
 } from '../types';
-import {getNotes, deleteNote, deleteCallback} from '../../actions/note/notes.action';
+import {deleteCallback} from '../../actions/note/notes.action';
 
 
 //Action, not action creator.
