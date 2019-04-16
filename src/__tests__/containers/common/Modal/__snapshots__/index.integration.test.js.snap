@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ModalContainer Integration Test should render ModalContainer component 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <Connect(ModalContainer)>
+    <ModalContainer
+      closeModal={[Function]}
+      modal={
+        Object {
+          "props": Object {
+            "body": "note edited body",
+            "status": "success",
+            "title": "Note edited",
+          },
+          "show": true,
+          "type": "status",
+        }
+      }
+    >
+      <Modal
+        close={[Function]}
+        show={true}
+      >
+        <div
+          className="veil"
+        />
+        <div
+          className="modal"
+        >
+          <StatusMessage
+            body="note edited body"
+            status="success"
+            title="Note edited"
+          >
+            <h1>
+              Note edited
+            </h1>
+            note edited body
+          </StatusMessage>
+          <button
+            className="modalButton ui inverted red button"
+            onClick={[Function]}
+          >
+            close
+          </button>
+        </div>
+      </Modal>
+    </ModalContainer>
+  </Connect(ModalContainer)>
+</Provider>
+`;

@@ -17,7 +17,7 @@ describe('SelectContainer Integration Test', () => {
                 <Provider store={store}>
                     <SelectContainer {...props}/>
                 </Provider>
-            );
+            )
         }
         return mountedComponent;
     };
