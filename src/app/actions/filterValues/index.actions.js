@@ -4,4 +4,3 @@ export const onChangeFilterValue = (value) => ({
     type: ONCHANGE_FILTER_VALUE,
     payload: value
 });
-k
