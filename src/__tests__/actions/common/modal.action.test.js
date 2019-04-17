@@ -69,5 +69,5 @@ describe('modal actions', () => {
             expect(dispatch).toHaveBeenNthCalledWith(2, expected);
             expect(dispatch).toMatchSnapshot();
         });
-    })
+    });
 });
