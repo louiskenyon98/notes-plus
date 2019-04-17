@@ -1,7 +1,14 @@
 import React from 'react';
 import MockAdapter from 'axios-mock-adapter';
 import axios from 'axios';
-import {getNotes, getNote, postNote, patchNote, deleteNote} from '../../../app/actions/note/notes.action';
+import {
+    getNotes,
+    getNote,
+    postNote,
+    patchNote,
+    deleteNote,
+    deleteCallback
+} from '../../../app/actions/note/notes.action';
 import {showFailModal, showSuccessModal} from '../../../app/actions/common/modal.action';
 import {GET_NOTE, GET_NOTES} from '../../../app/actions/types';
 
@@ -252,6 +259,15 @@ describe('notes actions', () => {
                     body: 'Sorry, could not delete note, please check connection to API.'
                 })
             })
+        })
+    });
+    describe('deleteCallback', () => {
+        it('should dispatch deleteNote', async () => {
+            mock.onDelete('/api/notes/91').reply(200, {
+                statusText: "OK"
+            });
+            await dispatch(deleteCallback(91));
+            expect(dispatch).toHaveBeenCalledTimes(2);
         })
     })
 });
