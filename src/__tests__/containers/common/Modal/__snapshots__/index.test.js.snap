@@ -40,12 +40,12 @@ exports[`ModalContainer render should render nothing when no type is supplied 1`
 />
 `;
 
-exports[`ModalContainer render should render the ConfirmationMessage component when type = confirmation 1`] = `
+exports[`ModalContainer render should render the Index component when type = confirmation 1`] = `
 <Modal
   close={[MockFunction]}
   show={true}
 >
-  <ConfirmationMessage
+  <Index
     foo="bar"
   />
 </Modal>

@@ -1,10 +1,10 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import ConfirmationMessage from '../../../../app/components/common/Modal/ConfirmationMessage';
+import Index from '../../../../app/components/common/Modal/ConfirmationMessage';
 
-describe('ConfirmationMessage', () => {
+describe('Index', () => {
     let props = {};
-    let wrapper = () => shallow(<ConfirmationMessage {...props}/>);
+    let wrapper = () => shallow(<Index {...props}/>);
     beforeEach(() => {
         props = {
             body: 'Confirmation message body',

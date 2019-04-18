@@ -16,6 +16,7 @@ exports[`ModalContainer Integration Test should render ModalContainer component 
   <Connect(ModalContainer)>
     <ModalContainer
       closeModal={[Function]}
+      deleteCallback={[Function]}
       modal={
         Object {
           "props": Object {
@@ -34,6 +35,7 @@ exports[`ModalContainer Integration Test should render ModalContainer component 
       >
         <div
           className="veil"
+          onClick={[Function]}
         />
         <div
           className="modal"
@@ -48,12 +50,6 @@ exports[`ModalContainer Integration Test should render ModalContainer component 
             </h1>
             note edited body
           </StatusMessage>
-          <button
-            className="modalButton ui inverted red button"
-            onClick={[Function]}
-          >
-            close
-          </button>
         </div>
       </Modal>
     </ModalContainer>

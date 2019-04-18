@@ -14,7 +14,7 @@
   h1 {
     font-family: 'Thasadith', sans-serif !important;
   }
-  z-index: 2;
+  z-index: 10;
   height: auto;
   background-color: white;
   box-shadow: 6px 6px 8px 1px;
@@ -25,10 +25,6 @@
   left: 50%;
   border-radius: .28571429rem;
   transform: translate(-50%, -50%);
-  .modalButton {
-    z-index: 3;
-    float: right;
-  }
 }
 .nav {
   .title {

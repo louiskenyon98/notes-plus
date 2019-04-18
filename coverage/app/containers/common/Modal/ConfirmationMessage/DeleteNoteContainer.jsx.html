@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Code coverage report for app/containers/common/formFields/SelectContainer/index.jsx</title>
+    <title>Code coverage report for app/containers/common/Modal/ConfirmationMessage/DeleteNoteContainer.jsx</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="..\..\..\..\..\prettify.css" />
     <link rel="stylesheet" href="..\..\..\..\..\base.css" />
@@ -16,13 +16,13 @@
 <div class='wrapper'>
   <div class='pad1'>
     <h1>
-      <a href="..\..\..\..\..\index.html">All files</a> / <a href="index.html">app/containers/common/formFields/SelectContainer</a> index.jsx
+      <a href="..\..\..\..\..\index.html">All files</a> / <a href="index.html">app/containers/common/Modal/ConfirmationMessage</a> DeleteNoteContainer.jsx
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
         <span class="strong">0% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>0/8</span>
+        <span class='fraction'>0/6</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -32,12 +32,12 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">0% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>0/1</span>
+        <span class='fraction'>0/4</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">0% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>0/8</span>
+        <span class='fraction'>0/6</span>
       </div>
     </div>
   </div>
@@ -69,19 +69,11 @@
 24
 25
 26
-27</td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+27
+28
+29
+30
+31</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -94,33 +86,53 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >import React from 'react';</span>
-<span class="cstat-no" title="statement not covered" >import {connect} from 'react-redux';</span>
-<span class="cstat-no" title="statement not covered" >import Select from '../../../../components/common/formFields/Select';</span>
-<span class="cstat-no" title="statement not covered" >import {filterOptions} from '../../../../config/filterOptions';</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react';
+import {connect} from 'react-redux';
+import {deleteNote, getNotes} from '../../../../actions/note/notes.action';
+import {closeModal} from '../../../../actions/common/modal.action';
+import DeleteNote from '../../../../components/common/Modal/ConfirmationMessage/DeleteNote';
 &nbsp;
-<span class="cstat-no" title="statement not covered" >import {onChangeFilterValue} from '../../../../actions/filterValues/index.actions';</span>
+class DeleteNoteContainer extends React.Component {
+<span class="fstat-no" title="function not covered" >    co</span>nstructor(props) {
+<span class="cstat-no" title="statement not covered" >        super(props);</span>
+<span class="cstat-no" title="statement not covered" >        this.deleteNote = this.deleteNote.bind(this);</span>
+    }
 &nbsp;
+<span class="fstat-no" title="function not covered" >    de</span>leteNote() {
+<span class="cstat-no" title="statement not covered" >        this.props.deleteNote(this.props.id, <span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >            this.props.closeModal();</span>
+<span class="cstat-no" title="statement not covered" >            this.props.getNotes();</span>
+        })
+    }
 &nbsp;
-export class SelectContainer extends React.Component {
-    render() {
+<span class="fstat-no" title="function not covered" >    re</span>nder() {
 <span class="cstat-no" title="statement not covered" >        return (</span>
-            &lt;Select
-                options={filterOptions}
-                value={this.props.filterOption}
-                onChange={this.props.onChangeFilterValue}
+            &lt;DeleteNote
+                cancel={this.props.closeModal}
+                delete={this.deleteNote}
             /&gt;
         )
     }
 }
 &nbsp;
-const <span class="fstat-no" title="function not covered" >mapStateToProps = <span class="cstat-no" title="statement not covered" >(</span>state) =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >    return {</span>
-        filterOption: state.notes.filterOption
-    }
-};
-export default connect(mapStateToProps, {onChangeFilterValue})(SelectContainer);
+export default connect(undefined, {deleteNote, getNotes, closeModal})(DeleteNoteContainer)
 &nbsp;</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->

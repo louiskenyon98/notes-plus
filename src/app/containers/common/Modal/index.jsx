@@ -1,17 +1,24 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {closeModal} from '../../../actions/common/modal.action';
+import {deleteCallback} from "../../../actions/note/notes.action";
 import Modal from '../../../components/common/Modal/Modal';
 import StatusMessage from "../../../components/common/Modal/StatusMessage";
-import ConfirmationMessage from "../../../components/common/Modal/ConfirmationMessage";
+import DeleteNoteContainer from "./ConfirmationMessage/DeleteNoteContainer";
 
 export class ModalContainer extends React.Component {
     returnModal() {
         switch (this.props.modal.type) {
             case 'status':
-                return <StatusMessage {...this.props.modal.props}/>;
-            case 'confirmation':
-                return <ConfirmationMessage {...this.props.modal.props}/>;
+                return (
+                    <StatusMessage {...this.props.modal.props}/>
+                );
+            case 'deleteNoteConfirmation':
+                return (
+                    <DeleteNoteContainer
+                        {...this.props.modal.props}
+                    />
+                );
         }
     }
 
@@ -33,4 +40,4 @@ const mapStateToProps = (state) => {
     }
 };
 
-export default connect(mapStateToProps, {closeModal})(ModalContainer)
+export default connect(mapStateToProps, {closeModal, deleteCallback})(ModalContainer)
