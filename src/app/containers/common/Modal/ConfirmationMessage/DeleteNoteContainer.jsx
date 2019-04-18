@@ -4,7 +4,7 @@ import {deleteNote, getNotes} from '../../../../actions/note/notes.action';
 import {closeModal} from '../../../../actions/common/modal.action';
 import DeleteNote from '../../../../components/common/Modal/ConfirmationMessage/DeleteNote';
 
-class DeleteNoteContainer extends React.Component {
+export class DeleteNoteContainer extends React.Component {
     constructor(props) {
         super(props);
         this.deleteNote = this.deleteNote.bind(this);
