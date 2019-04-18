@@ -5,9 +5,7 @@ import App from '../app/App';
 import '../app/index'
 
 jest.mock('react-dom', () => ({
-    ReactDOM: {
-        render: jest.fn()
-    }
+    render: jest.fn()
 }));
 
 describe('index', () => {
