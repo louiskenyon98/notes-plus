@@ -18,3 +18,22 @@ exports[`DeleteNote render should render ConfirmationMessage with title, body 1`
   title="Are you sure you want to delete your note"
 />
 `;
+
+exports[`DeleteNote render should render ConfirmationMessage with title, body, and should have accept/decline objects 1`] = `
+<ConfirmationMessage
+  accept={
+    Object {
+      "label": "DELETE",
+      "onClick": [MockFunction],
+    }
+  }
+  body="Hello world"
+  decline={
+    Object {
+      "label": "CANCEL",
+      "onClick": [MockFunction],
+    }
+  }
+  title="Are you sure you want to delete your note"
+/>
+`;

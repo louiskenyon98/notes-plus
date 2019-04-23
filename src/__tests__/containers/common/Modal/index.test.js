@@ -21,8 +21,8 @@ describe('ModalContainer', () => {
         it('should render the StatusMessage component when type = status', () => {
             expect(wrapper()).toMatchSnapshot();
         });
-        it('should render the Index component when type = confirmation', () => {
-            props.modal.type = 'confirmation';
+        it('should render the Index component when type = deleteNoteConfirmation', () => {
+            props.modal.type = 'deleteNoteConfirmation';
             expect(wrapper()).toMatchSnapshot();
         });
         it('should set show prop to false when show = false', () => {
