@@ -1,6 +1,6 @@
 import axios from 'axios';
 import history from '../../history';
-import {closeModal, showFailModal, showSuccessModal} from '../common/modal.action';
+import {showFailModal, showSuccessModal} from '../common/modal.action';
 import {GET_NOTE, GET_NOTES} from '../types';
 
 
