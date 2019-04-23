@@ -111,12 +111,3 @@ export const deleteNote = (id, callback) => dispatch => {
             }))
         })
 };
-
-export const deleteCallback = (id) => dispatch => {
-    console.log('deleteCallback called');
-    console.log('with id', id);
-    dispatch(deleteNote(id, () => {
-        dispatch(getNotes());
-        dispatch(closeModal());
-    }));
-};

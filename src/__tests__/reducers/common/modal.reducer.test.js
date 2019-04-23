@@ -2,8 +2,7 @@ import React from 'react';
 import modalReducer from '../../../app/reducers/common/modal.reducer';
 import {
     SHOW_STATUS_MODAL,
-    CLOSE_MODAL,
-    SHOW_CONFIRMATION_MODAL
+    CLOSE_MODAL
 } from '../../../app/actions/types';
 
 describe('modalReducer', () => {
@@ -56,46 +55,6 @@ describe('modalReducer', () => {
                 };
                 expect(modalReducer(state, action)).toEqual(expected);
             })
-        })
-    });
-    describe('SHOW_CONFIRMATION_MODAL', () => {
-        describe('has initial state', () => {
-            it('should handle SHOW_CONFIRMATION_MODAL', () => {
-                const state = undefined;
-                const action = {
-                    type: SHOW_CONFIRMATION_MODAL,
-                    payload: {}
-                };
-                const expected = {
-                    show: true,
-                    type: 'confirmation',
-                    props: {}
-                };
-                expect(modalReducer(state, action)).toEqual(expected);
-            })
-        });
-        describe('has state', () => {
-            const state = {
-                show: false,
-                type: '',
-                props: {
-                    foo: 'bar'
-                }
-            };
-            const action = {
-                type: SHOW_CONFIRMATION_MODAL,
-                payload: {
-                    fizz: 'buzz'
-                }
-            };
-            const expected = {
-                show: true,
-                type: 'confirmation',
-                props: {
-                    fizz: 'buzz'
-                }
-            };
-            expect(modalReducer(state, action)).toEqual(expected);
         })
     });
     describe('CLOSE_MODAL', () => {

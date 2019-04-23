@@ -1,7 +1,6 @@
 import {
     SHOW_STATUS_MODAL,
     CLOSE_MODAL,
-    SHOW_CONFIRMATION_MODAL,
     SHOW_DELETE_CONFIRMATION_MODAL
 } from '../../actions/types';
 
@@ -25,13 +24,6 @@ export default (state = initialState, action) => {
                 type: 'deleteNoteConfirmation',
                 props: action.payload
             };
-        case SHOW_CONFIRMATION_MODAL:
-            return {
-                show: true,
-                type: 'confirmation',
-                props: action.payload
-            };
-
         case CLOSE_MODAL:
             return initialState;
         default:

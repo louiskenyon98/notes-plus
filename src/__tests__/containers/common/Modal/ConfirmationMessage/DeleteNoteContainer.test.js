@@ -7,6 +7,7 @@ describe('DeleteNoteContainer', () => {
     let wrapper = () => shallow(<DeleteNoteContainer {...props}/>);
     beforeEach(() => {
         props = {
+            id: 91,
             closeModal: jest.fn(),
             getNotes: jest.fn(),
             deleteNote: jest.fn()
@@ -17,9 +18,4 @@ describe('DeleteNoteContainer', () => {
             expect(wrapper()).toMatchSnapshot();
         })
     });
-    describe('functionality', () => {
-        it('should call deleteNote with ', () => {
-        })
-    })
 });
-//:todo test me, bitch

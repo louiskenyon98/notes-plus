@@ -6,8 +6,7 @@ import {
     getNote,
     postNote,
     patchNote,
-    deleteNote,
-    deleteCallback
+    deleteNote
 } from '../../../app/actions/note/notes.action';
 import {showFailModal, showSuccessModal} from '../../../app/actions/common/modal.action';
 import {GET_NOTE, GET_NOTES} from '../../../app/actions/types';
@@ -261,13 +260,4 @@ describe('notes actions', () => {
             })
         })
     });
-    describe('deleteCallback', () => {
-        it('should dispatch deleteNote', async () => {
-            mock.onDelete('/api/notes/91').reply(200, {
-                statusText: "OK"
-            });
-            await dispatch(deleteCallback(91));
-            expect(dispatch).toHaveBeenCalledTimes(2);
-        })
-    })
 });

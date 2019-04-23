@@ -1,10 +1,8 @@
 import {
     CLOSE_MODAL,
     SHOW_DELETE_CONFIRMATION_MODAL,
-    SHOW_CONFIRMATION_MODAL,
     SHOW_STATUS_MODAL
 } from '../types';
-import {deleteCallback} from '../../actions/note/notes.action';
 
 
 //Action, not action creator.
@@ -29,26 +27,6 @@ export const showDeleteNoteConfirmationModal = (id) => ({
     payload: {
         id
     }
-});
-// export const showDeleteNoteConfirmationModal = (id) => dispatch => {
-//     dispatch(
-//         showConfirmationModal({
-//             body: 'Do you want to delete this note',
-//             accept: {
-//                 label: 'YES',
-//                 callback: () => dispatch(deleteCallback(id))
-//             },
-//             decline: {
-//                 label: 'NO',
-//                 callback: closeModal
-//             }
-//         })
-//     )
-// };
-
-export const showConfirmationModal = (details) => ({
-    type: SHOW_CONFIRMATION_MODAL,
-    payload: details
 });
 
 export const closeModal = () => ({
