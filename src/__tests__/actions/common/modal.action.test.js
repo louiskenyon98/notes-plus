@@ -5,7 +5,6 @@ import {
     showDeleteNoteConfirmationModal
 } from '../../../app/actions/common/modal.action';
 import {
-    SHOW_CONFIRMATION_MODAL,
     SHOW_STATUS_MODAL
 } from '../../../app/actions/types';
 
@@ -47,27 +46,6 @@ describe('modal actions', () => {
             };
             dispatch(showFailModal(details));
             expect(dispatch).toHaveBeenCalledWith(expectedAction);
-        });
-    });
-    describe('showDeleteNoteConfirmationModal', () => {
-        it('should show confirmation modal', () => {
-            const expected = {
-                type: SHOW_CONFIRMATION_MODAL,
-                payload: {
-                    body: 'Do you want to delete this note',
-                    accept: {
-                        label: 'YES',
-                        callback: expect.anything()
-                    },
-                    decline: {
-                        label: 'NO',
-                        callback: expect.anything()
-                    }
-                }
-            };
-            dispatch(showDeleteNoteConfirmationModal(91));
-            expect(dispatch).toHaveBeenNthCalledWith(2, expected);
-            expect(dispatch).toMatchSnapshot();
         });
     });
 });
