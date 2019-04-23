@@ -2,10 +2,12 @@ import React from 'react';
 import {
     showSuccessModal,
     showFailModal,
+    closeModal,
     showDeleteNoteConfirmationModal
 } from '../../../app/actions/common/modal.action';
 import {
-    SHOW_STATUS_MODAL
+    SHOW_STATUS_MODAL,
+    CLOSE_MODAL, SHOW_DELETE_CONFIRMATION_MODAL
 } from '../../../app/actions/types';
 
 let dispatch = jest.fn((objOrFunc) => {
@@ -48,4 +50,21 @@ describe('modal actions', () => {
             expect(dispatch).toHaveBeenCalledWith(expectedAction);
         });
     });
+    describe('showDeleteConfirmationModal', () => {
+        const expectedAction = {
+            type: SHOW_DELETE_CONFIRMATION_MODAL,
+            payload: {
+                id: 91
+            }
+        };
+        dispatch(showDeleteNoteConfirmationModal(91));
+        expect(dispatch).toHaveBeenCalledWith(expectedAction);
+    });
+    describe('closeModal', () => {
+        const expectedAction = {
+            type: CLOSE_MODAL
+        };
+        dispatch(closeModal());
+        expect(dispatch).toHaveBeenCalledWith(expectedAction);
+    })
 });

@@ -30,5 +30,5 @@ export const showDeleteNoteConfirmationModal = (id) => ({
 });
 
 export const closeModal = () => ({
-    type: CLOSE_MODAL,
+    type: CLOSE_MODAL
 });
