@@ -6,7 +6,7 @@ import {Provider} from 'react-redux';
 import {Router} from 'react-router-dom';
 import createHistory from 'history/createBrowserHistory';
 import NoteEditContainer from '../../../../app/containers/notes/NoteEdit/index';
-import {getNotes, getNote, patchNote} from '../../../../app/actions/note/notes.action';
+import {getNote} from '../../../../app/actions/note/notes.action';
 
 jest.mock('redux-form', () => ({
     Field: () => <div/>,
