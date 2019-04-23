@@ -13,6 +13,7 @@ exports[`ModalContainer render should render the StatusMessage component when ty
   show={true}
 >
   <StatusMessage
+    close={[MockFunction]}
     foo="bar"
   />
 </Modal>
@@ -24,6 +25,7 @@ exports[`ModalContainer render should set show prop to false when show = false 1
   show={false}
 >
   <StatusMessage
+    close={[MockFunction]}
     foo="bar"
   />
 </Modal>

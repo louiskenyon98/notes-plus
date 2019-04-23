@@ -37,8 +37,8 @@ describe('Index', () => {
             expect(props.accept.onClick).toHaveBeenCalledTimes(0);
             expect(props.decline.onClick).toHaveBeenCalledTimes(0);
             wrapper().find('button').first().simulate('click');
-            expect(props.accept.onClick).toHaveBeenCalledTimes(0);
-            expect(props.decline.onClick).toHaveBeenCalledTimes(1);
+            expect(props.accept.onClick).toHaveBeenCalledTimes(1);
+            expect(props.decline.onClick).toHaveBeenCalledTimes(0);
         });
     });
 });

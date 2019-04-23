@@ -41,6 +41,7 @@ exports[`ModalContainer Integration Test should render ModalContainer component 
         >
           <StatusMessage
             body="note edited body"
+            close={[Function]}
             status="success"
             title="Note edited"
           >
@@ -48,6 +49,12 @@ exports[`ModalContainer Integration Test should render ModalContainer component 
               Note edited
             </h1>
             note edited body
+            <button
+              className="modalButton ui inverted red button"
+              onClick={[Function]}
+            >
+              Close
+            </button>
           </StatusMessage>
         </div>
       </Modal>

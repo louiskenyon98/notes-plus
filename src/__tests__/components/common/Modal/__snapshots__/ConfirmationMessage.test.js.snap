@@ -15,16 +15,16 @@ exports[`Index render should render a component with body 1`] = `
     }
   >
     <button
-      className="ui inverted primary button"
-      onClick={[MockFunction]}
-    >
-      CANCEL
-    </button>
-    <button
-      className="ui inverted primary button"
+      className="modalButton ui inverted primary button"
       onClick={[MockFunction]}
     >
       DELETE
+    </button>
+    <button
+      className="modalButton ui inverted red button"
+      onClick={[MockFunction]}
+    >
+      CANCEL
     </button>
   </div>
 </Fragment>
@@ -44,16 +44,16 @@ exports[`Index render should render no body when no body is passed in 1`] = `
     }
   >
     <button
-      className="ui inverted primary button"
-      onClick={[MockFunction]}
-    >
-      CANCEL
-    </button>
-    <button
-      className="ui inverted primary button"
+      className="modalButton ui inverted primary button"
       onClick={[MockFunction]}
     >
       DELETE
+    </button>
+    <button
+      className="modalButton ui inverted red button"
+      onClick={[MockFunction]}
+    >
+      CANCEL
     </button>
   </div>
 </Fragment>

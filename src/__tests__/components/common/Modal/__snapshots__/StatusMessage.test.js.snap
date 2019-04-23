@@ -6,14 +6,10 @@ exports[`StatusMessage render should render a component with a title and body 1`
     Status message title
   </h1>
   Status message body
-</Fragment>
-`;
-
-exports[`StatusMessage should render a component with a title and body 1`] = `
-<Fragment>
-  <h1>
-    Status message title
-  </h1>
-  Status message body
+  <button
+    className="modalButton ui inverted red button"
+  >
+    Close
+  </button>
 </Fragment>
 `;
