@@ -8,10 +8,10 @@ describe('Modal', () => {
 
     beforeEach(() => {
         props = {
+            title: 'This is a modal title',
             close: jest.fn(),
             show: true,
             children: <div>Hello world</div>,
-            title: 'This is a modal title',
         }
     });
 

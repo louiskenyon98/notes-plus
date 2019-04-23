@@ -16,7 +16,6 @@ exports[`ModalContainer Integration Test should render ModalContainer component 
   <Connect(ModalContainer)>
     <ModalContainer
       closeModal={[Function]}
-      deleteCallback={[Function]}
       modal={
         Object {
           "props": Object {

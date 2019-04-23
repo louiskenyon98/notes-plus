@@ -1,4 +1,6 @@
 import React from 'react';
+import styles from '../../../../../themes/style.scss';
+
 export default class StatusMessage extends React.PureComponent {
 
     returnTitle() {
@@ -18,6 +20,12 @@ export default class StatusMessage extends React.PureComponent {
             <React.Fragment>
                 <h1>{this.returnTitle()}</h1>
                 {this.props.body}
+                <button
+                    className={`${styles.modalButton} ui inverted red button`}
+                    onClick={this.props.close}
+                >
+                    Close
+                </button>
             </React.Fragment>
         )
     }

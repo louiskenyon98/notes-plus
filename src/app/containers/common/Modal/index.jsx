@@ -1,9 +1,8 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {closeModal} from '../../../actions/common/modal.action';
-import {deleteCallback} from "../../../actions/note/notes.action";
 import Modal from '../../../components/common/Modal/Modal';
-import StatusMessage from "../../../components/common/Modal/StatusMessage";
+import StatusMessage from "../../../components/common/Modal/StatusMessage/Index";
 import DeleteNoteContainer from "./ConfirmationMessage/DeleteNoteContainer";
 
 export class ModalContainer extends React.Component {
@@ -11,7 +10,10 @@ export class ModalContainer extends React.Component {
         switch (this.props.modal.type) {
             case 'status':
                 return (
-                    <StatusMessage {...this.props.modal.props}/>
+                    <StatusMessage
+                        {...this.props.modal.props}
+                        close={this.props.closeModal}
+                    />
                 );
             case 'deleteNoteConfirmation':
                 return (
@@ -40,4 +42,4 @@ const mapStateToProps = (state) => {
     }
 };
 
-export default connect(mapStateToProps, {closeModal, deleteCallback})(ModalContainer)
+export default connect(mapStateToProps, {closeModal})(ModalContainer)

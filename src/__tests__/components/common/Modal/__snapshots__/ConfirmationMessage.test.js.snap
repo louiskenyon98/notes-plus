@@ -1,59 +1,60 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Index render body should render a component with body 1`] = `
+exports[`Index render should render a component with body 1`] = `
 <Fragment>
   <h1>
-    Is you sure fam?
+    Confirmation message title
   </h1>
   Confirmation message body
-  <button
-    className="modalButton ui inverted primary button"
-    onClick={[MockFunction]}
+  <div
+    style={
+      Object {
+        "float": "right",
+        "margin": 20,
+      }
+    }
   >
-    YES
-  </button>
+    <button
+      className="ui inverted primary button"
+      onClick={[MockFunction]}
+    >
+      CANCEL
+    </button>
+    <button
+      className="ui inverted primary button"
+      onClick={[MockFunction]}
+    >
+      DELETE
+    </button>
+  </div>
 </Fragment>
 `;
 
-exports[`Index render body should render no body when no body is passed in 1`] = `
+exports[`Index render should render no body when no body is passed in 1`] = `
 <Fragment>
   <h1>
-    Is you sure fam?
+    Confirmation message title
   </h1>
-  <button
-    className="modalButton ui inverted primary button"
-    onClick={[MockFunction]}
+  <div
+    style={
+      Object {
+        "float": "right",
+        "margin": 20,
+      }
+    }
   >
-    YES
-  </button>
-</Fragment>
-`;
-
-exports[`Index should render a component with body 1`] = `
-<Fragment>
-  <h1>
-    Is you sure fam?
-  </h1>
-  Confirmation message body
-  <button
-    className="modalButton ui inverted primary button"
-    onClick={[MockFunction]}
-  >
-    YES
-  </button>
-</Fragment>
-`;
-
-exports[`Index should render no body when no body is passed in 1`] = `
-<Fragment>
-  <h1>
-    Is you sure fam?
-  </h1>
-  <button
-    className="modalButton ui inverted primary button"
-    onClick={[MockFunction]}
-  >
-    YES
-  </button>
+    <button
+      className="ui inverted primary button"
+      onClick={[MockFunction]}
+    >
+      CANCEL
+    </button>
+    <button
+      className="ui inverted primary button"
+      onClick={[MockFunction]}
+    >
+      DELETE
+    </button>
+  </div>
 </Fragment>
 `;
