@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DeleteNoteContainer Integration Test render should render DeleteNote component 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <Connect(DeleteNoteContainer)
+    id={100}
+  >
+    <DeleteNoteContainer
+      closeModal={[Function]}
+      deleteNote={[Function]}
+      getNotes={[Function]}
+      id={100}
+    >
+      <DeleteNote
+        cancel={[Function]}
+        delete={[Function]}
+      >
+        <ConfirmationMessage
+          accept={
+            Object {
+              "label": "DELETE",
+              "onClick": [Function],
+            }
+          }
+          body="Hello world"
+          decline={
+            Object {
+              "label": "CANCEL",
+              "onClick": [Function],
+            }
+          }
+          title="Are you sure you want to delete your note"
+        >
+          <h1>
+            Are you sure you want to delete your note
+          </h1>
+          Hello world
+          <div
+            style={
+              Object {
+                "float": "right",
+                "margin": 20,
+              }
+            }
+          >
+            <button
+              className="modalButton ui inverted primary button"
+              onClick={[Function]}
+            >
+              DELETE
+            </button>
+            <button
+              className="modalButton ui inverted red button"
+              onClick={[Function]}
+            >
+              CANCEL
+            </button>
+          </div>
+        </ConfirmationMessage>
+      </DeleteNote>
+    </DeleteNoteContainer>
+  </Connect(DeleteNoteContainer)>
+</Provider>
+`;

@@ -90,7 +90,7 @@ exports[`NoteEditContainer Integration Test should render NoteEditContainer comp
                   "results": Array [
                     Object {
                       "isThrow": false,
-                      "value": undefined,
+                      "value": [Function],
                     },
                   ],
                 }
@@ -106,6 +106,7 @@ exports[`NoteEditContainer Integration Test should render NoteEditContainer comp
             >
               <form
                 className="note-editor-form ui form error form"
+                onSubmit={[Function]}
               >
                 <Field
                   component={[Function]}

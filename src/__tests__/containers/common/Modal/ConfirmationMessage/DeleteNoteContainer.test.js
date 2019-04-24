@@ -35,6 +35,7 @@ describe('DeleteNoteContainer', () => {
                         expect(props.getNotes).not.toHaveBeenCalled();
                         wrapper().find('DeleteNote').first().props().delete();
                         expect(props.deleteNote).toHaveBeenCalledTimes(1);
+                        expect(props.deleteNote).toHaveBeenCalledWith(91, expect.anything());
                         expect(props.closeModal).toHaveBeenCalledTimes(1);
                         expect(props.getNotes).toHaveBeenCalledTimes(1);
                     });

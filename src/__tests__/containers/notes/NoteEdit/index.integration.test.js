@@ -10,7 +10,7 @@ import {getNote} from '../../../../app/actions/note/notes.action';
 
 jest.mock('redux-form', () => ({
     Field: () => <div/>,
-    reduxForm: () => Component => (props) => <Component {...props} handleSubmit={jest.fn((submit) => submit())} />
+    reduxForm: () => Component => (props) => <Component {...props} handleSubmit={jest.fn((submit) => submit)} />
 }));
 
 jest.mock('../../../../app/actions/note/notes.action', () => ({
