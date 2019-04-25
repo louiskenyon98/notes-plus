@@ -20,7 +20,6 @@
     "express": "^4.15.3",
     "history": "^4.7.2",
     "lodash": "^4.17.11",
-    "prop-types": "^15.7.2",
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
     "react-redux": "^6.0.0",

@@ -165,6 +165,29 @@ describe('notes actions', () => {
                 });
             })
         });
+        describe('promise resolved without callback', () => {
+            it('should dispatch showSuccessModal', async () => {
+                mock.onPost('api/notes/', {
+                    "title": "noteTitle1",
+                    "body": "noteBody1"
+                }).reply(200, {
+                    statusText: "OK"
+                });
+                await dispatch(postNote({
+                    "title": "noteTitle1",
+                    "body": "noteBody1"
+                }, undefined));
+                expect(mockCallBack).not.toHaveBeenCalled();
+                expect(dispatch).toHaveBeenCalledTimes(2);
+                expect(dispatch).toHaveBeenCalledTimes(2);
+                expect(dispatch).toHaveBeenNthCalledWith(2, 'showSuccessModal called');
+                expect(showSuccessModal).toHaveBeenCalledTimes(1);
+                expect(showSuccessModal).toHaveBeenCalledWith({
+                    title: 'Note saved',
+                    body: 'New note created, nice one!'
+                });
+            })
+        });
         describe('promise rejected', () => {
             it('should dispatch showFailModal', async () => {
                 mock.onPost('api/notes/', {
@@ -210,6 +233,28 @@ describe('notes actions', () => {
                 });
             })
         });
+        describe('promise resolved without callback', () => {
+            it('should dispatch showSuccessModal', async () => {
+                mock.onPatch('/api/notes/', {
+                    "title": "noteTitle1",
+                    "body": "noteBody1"
+                }).reply(200, {
+                    statusText: "OK"
+                });
+                await dispatch(patchNote({
+                    "title": "noteTitle1",
+                    "body": "noteBody1"
+                }, undefined));
+                expect(mockCallBack).not.toHaveBeenCalled();
+                expect(dispatch).toHaveBeenCalledTimes(2);
+                expect(dispatch).toHaveBeenNthCalledWith(2, 'showSuccessModal called');
+                expect(showSuccessModal).toHaveBeenCalledTimes(1);
+                expect(showSuccessModal).toHaveBeenCalledWith({
+                    title: 'Note edited',
+                    body: 'Look who managed to edit a note all by themselves!'
+                });
+            })
+        });
         describe('promise rejected', () => {
             it('should dispatch showFail', async () => {
                 mock.onPatch('/api/notes/', {
@@ -241,6 +286,15 @@ describe('notes actions', () => {
                 });
                 await dispatch(deleteNote(91, mockCallBack));
                 expect(mockCallBack).toHaveBeenCalled();
+            })
+        });
+        describe('promise resolved without callback', () => {
+            it('should call callback', async () => {
+                mock.onDelete('/api/notes/91').reply(200, {
+                    statusText: "OK"
+                });
+                await dispatch(deleteNote(91, undefined));
+                expect(mockCallBack).not.toHaveBeenCalled();
             })
         });
         describe('promise rejected', () => {
