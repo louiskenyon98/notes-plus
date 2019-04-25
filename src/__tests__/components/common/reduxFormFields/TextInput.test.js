@@ -22,4 +22,26 @@ describe('TextInput', () => {
             expect(wrapper()).toMatchSnapshot();
         });
     });
+    describe('functionality', () => {
+        it('should have class of error when touched = true and error is truthy', () => {
+            expect(wrapper().find('div').first().hasClass('error')).toBe(true);
+        });
+        it('should not have a class of error when touch = false or error is false', () => {
+            props.meta = {
+                touched: false,
+                error: ''
+            };
+            expect(wrapper().find('div').first().hasClass('error')).toBe(false);
+            props.meta = {
+                touched: true,
+                error: ''
+            };
+            expect(wrapper().find('div').first().hasClass('error')).toBe(false);
+            props.meta = {
+                touched: false,
+                error: 'Error string'
+            };
+            expect(wrapper().find('div').first().hasClass('error')).toBe(false);
+        })
+    })
 });
