@@ -97,3 +97,104 @@ exports[`NoteFormContainer Integration Test render should render NoteForm compon
   </Router>
 </Provider>
 `;
+
+exports[`NoteFormContainer Integration Test render should render NoteFormContainer component 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "createHref": [Function],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <Component
+      onSubmit={[MockFunction]}
+    >
+      <NoteFormContainer
+        handleSubmit={
+          [MockFunction] {
+            "calls": Array [
+              Array [
+                [Function],
+              ],
+            ],
+            "results": Array [
+              Object {
+                "isThrow": false,
+                "value": [Function],
+              },
+            ],
+          }
+        }
+        onSubmit={[MockFunction]}
+      >
+        <form
+          className="note-editor-form ui form error form"
+          onSubmit={[Function]}
+        >
+          <Field
+            component={[Function]}
+            label="Enter Note Title..."
+            name="title"
+          >
+            <div />
+          </Field>
+          <Field
+            component={[Function]}
+            label="Enter Note Body..."
+            name="body"
+          >
+            <div />
+          </Field>
+          <button
+            className="ui right floated button"
+          >
+            Submit
+          </button>
+          <Link
+            replace={false}
+            to="/"
+          >
+            <a
+              href="/"
+              onClick={[Function]}
+            >
+              <button
+                className="ui button"
+              >
+                Cancel
+              </button>
+            </a>
+          </Link>
+        </form>
+      </NoteFormContainer>
+    </Component>
+  </Router>
+</Provider>
+`;
