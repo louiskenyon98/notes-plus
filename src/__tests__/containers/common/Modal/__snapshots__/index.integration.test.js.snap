@@ -1,5 +1,248 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`ModalContainer Integration Test functionality should render DeleteNoteContainer when modal type is deleteNoteConfirmation 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <Connect(ModalContainer)
+    returnModal={[MockFunction]}
+  >
+    <ModalContainer
+      closeModal={[Function]}
+      modal={
+        Object {
+          "props": Object {
+            "body": "note edited body",
+            "status": "success",
+            "title": "Note edited",
+          },
+          "show": true,
+          "type": "deleteNoteConfirmation",
+        }
+      }
+      returnModal={[MockFunction]}
+    >
+      <Modal
+        close={[Function]}
+        show={true}
+      >
+        <div
+          className="veil"
+          onClick={[Function]}
+        />
+        <div
+          className="modal"
+        >
+          <Connect(DeleteNoteContainer)
+            body="note edited body"
+            status="success"
+            title="Note edited"
+          >
+            <DeleteNoteContainer
+              body="note edited body"
+              closeModal={[Function]}
+              deleteNote={[Function]}
+              getNotes={[Function]}
+              status="success"
+              title="Note edited"
+            >
+              <DeleteNote
+                cancel={[Function]}
+                delete={[Function]}
+              >
+                <ConfirmationMessage
+                  accept={
+                    Object {
+                      "label": "DELETE",
+                      "onClick": [Function],
+                    }
+                  }
+                  body="Hello world"
+                  decline={
+                    Object {
+                      "label": "CANCEL",
+                      "onClick": [Function],
+                    }
+                  }
+                  title="Are you sure you want to delete your note"
+                >
+                  <h1>
+                    Are you sure you want to delete your note
+                  </h1>
+                  Hello world
+                  <div
+                    style={
+                      Object {
+                        "float": "right",
+                        "margin": 20,
+                      }
+                    }
+                  >
+                    <button
+                      className="modalButton ui inverted primary button"
+                      onClick={[Function]}
+                    >
+                      DELETE
+                    </button>
+                    <button
+                      className="modalButton ui inverted red button"
+                      onClick={[Function]}
+                    >
+                      CANCEL
+                    </button>
+                  </div>
+                </ConfirmationMessage>
+              </DeleteNote>
+            </DeleteNoteContainer>
+          </Connect(DeleteNoteContainer)>
+        </div>
+      </Modal>
+    </ModalContainer>
+  </Connect(ModalContainer)>
+</Provider>
+`;
+
+exports[`ModalContainer Integration Test functionality should render DeleteNoteContainer when modal type is status 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <Connect(ModalContainer)
+    returnModal={[MockFunction]}
+  >
+    <ModalContainer
+      closeModal={[Function]}
+      modal={
+        Object {
+          "props": Object {
+            "body": "note edited body",
+            "status": "success",
+            "title": "Note edited",
+          },
+          "show": true,
+          "type": "status",
+        }
+      }
+      returnModal={[MockFunction]}
+    >
+      <Modal
+        close={[Function]}
+        show={true}
+      >
+        <div
+          className="veil"
+          onClick={[Function]}
+        />
+        <div
+          className="modal"
+        >
+          <StatusMessage
+            body="note edited body"
+            close={[Function]}
+            status="success"
+            title="Note edited"
+          >
+            <h1>
+              Note edited
+            </h1>
+            note edited body
+            <button
+              className="modalButton ui inverted red button"
+              onClick={[Function]}
+            >
+              Close
+            </button>
+          </StatusMessage>
+        </div>
+      </Modal>
+    </ModalContainer>
+  </Connect(ModalContainer)>
+</Provider>
+`;
+
+exports[`ModalContainer Integration Test render should render ModalContainer component 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <Connect(ModalContainer)
+    returnModal={[MockFunction]}
+  >
+    <ModalContainer
+      closeModal={[Function]}
+      modal={
+        Object {
+          "props": Object {
+            "body": "note edited body",
+            "status": "success",
+            "title": "Note edited",
+          },
+          "show": true,
+          "type": "status",
+        }
+      }
+      returnModal={[MockFunction]}
+    >
+      <Modal
+        close={[Function]}
+        show={true}
+      >
+        <div
+          className="veil"
+          onClick={[Function]}
+        />
+        <div
+          className="modal"
+        >
+          <StatusMessage
+            body="note edited body"
+            close={[Function]}
+            status="success"
+            title="Note edited"
+          >
+            <h1>
+              Note edited
+            </h1>
+            note edited body
+            <button
+              className="modalButton ui inverted red button"
+              onClick={[Function]}
+            >
+              Close
+            </button>
+          </StatusMessage>
+        </div>
+      </Modal>
+    </ModalContainer>
+  </Connect(ModalContainer)>
+</Provider>
+`;
+
 exports[`ModalContainer Integration Test should render ModalContainer component 1`] = `
 <Provider
   store={

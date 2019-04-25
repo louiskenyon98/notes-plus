@@ -22,7 +22,9 @@ describe('ModalContainer Integration Test', () => {
         return mountedComponent
     };
     beforeEach(() => {
-        props = {};
+        props = {
+            returnModal: jest.fn()
+        };
         store = mockStore({
             common: {
                 modal: {
@@ -37,8 +39,45 @@ describe('ModalContainer Integration Test', () => {
             }
         });
         mountedComponent = undefined;
+        jest.clearAllMocks();
     });
-    it('should render ModalContainer component', () => {
-        expect(wrapper()).toMatchSnapshot();
+    describe('render', () => {
+        it('should render ModalContainer component', () => {
+            expect(wrapper()).toMatchSnapshot();
+        })
+    });
+    describe('functionality', () => {
+        it('should render DeleteNoteContainer when modal type is status', () => {
+            store = mockStore({
+                common: {
+                    modal: {
+                        show: true,
+                        type: "status",
+                        props: {
+                            status: "success",
+                            title: "Note edited",
+                            body: "note edited body"
+                        }
+                    }
+                }
+            });
+            expect(wrapper()).toMatchSnapshot();
+        });
+        it('should render DeleteNoteContainer when modal type is deleteNoteConfirmation', () => {
+            store = mockStore({
+                common: {
+                    modal: {
+                        show: true,
+                        type: "deleteNoteConfirmation",
+                        props: {
+                            status: "success",
+                            title: "Note edited",
+                            body: "note edited body"
+                        }
+                    }
+                }
+            });
+            expect(wrapper()).toMatchSnapshot();
+        })
     })
 });
