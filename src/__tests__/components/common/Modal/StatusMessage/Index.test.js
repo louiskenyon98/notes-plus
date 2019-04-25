@@ -32,6 +32,11 @@ describe('StatusMessage', () => {
                 props.status = 'fail';
                 expect(wrapper().find('h1').first().text()).toBe('Sad times')
             });
+            it('should render nothing when there is not title prop and the status is blank', () => {
+                props.title = '';
+                props.status = '';
+                expect(wrapper().find('h1').first().text()).toBe('')
+            });
         });
     });
 });
