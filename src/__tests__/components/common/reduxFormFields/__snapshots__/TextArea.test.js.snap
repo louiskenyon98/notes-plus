@@ -1,22 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TextArea render should render textarea in error state if touched and error = true 1`] = `
-<div
-  className="field error form-body-field-wrapper"
->
-  <textarea
-    className="form-body-field"
-    cols="40"
-    foo="bar"
-    placeholder="Placeholder string"
-    rows="10"
-  />
-  <Error
-    message="Error string"
-  />
-</div>
-`;
-
 exports[`TextArea render should render textarea with placeholder and text in error state if touched and error = true 1`] = `
 <div
   className="field error form-body-field-wrapper"

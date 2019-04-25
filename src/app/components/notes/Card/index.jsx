@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 import styles from '../../../../themes/style.scss';
 
@@ -10,7 +11,6 @@ class Card extends React.PureComponent {
                 <div className={`ui raised card ${styles.card}`}>
                     <div className={`content`}>
                         <i
-                            // onClick={() => this.props.delete(this.props.id)}
                             onClick={() => this.props.delete(this.props.id)}
                             className={`right floated close icon ${styles["delete-button"]}`}
                         />
@@ -36,5 +36,12 @@ class Card extends React.PureComponent {
         )
     }
 }
+
+Card.propTypes = {
+    delete: PropTypes.func,
+    id: PropTypes.number,
+    title: PropTypes.string,
+    body: PropTypes.string
+};
 
 export default Card;

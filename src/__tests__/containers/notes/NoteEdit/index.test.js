@@ -12,7 +12,7 @@ describe('NoteEditContainer', () => {
             match: {
                 isExact: true,
                 params: {
-                    id: "89"
+                    id: 89
                 },
                 path: "/edit/:id",
                 url: "/edit/89"

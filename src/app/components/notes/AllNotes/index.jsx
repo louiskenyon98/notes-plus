@@ -1,5 +1,5 @@
 import React from 'react';
-
+import PropTypes from 'prop-types';
 import Card from '../Card';
 
 class AllNotes extends React.PureComponent {
@@ -27,5 +27,9 @@ class AllNotes extends React.PureComponent {
         )
     }
 }
+
+AllNotes.propTypes = {
+    data: PropTypes.array
+};
 
 export default AllNotes;

@@ -1,12 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ModalContainer render should render the Index component when type = confirmation 1`] = `
-<Modal
-  close={[MockFunction]}
-  show={true}
-/>
-`;
-
 exports[`ModalContainer render should render the Index component when type = deleteNoteConfirmation 1`] = `
 <Modal
   close={[MockFunction]}
