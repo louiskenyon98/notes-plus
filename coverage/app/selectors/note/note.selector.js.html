@@ -20,28 +20,28 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>0/11</span>
+        <span class='fraction'>10/10</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">50% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>0/2</span>
+        <span class='fraction'>1/2</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>0/4</span>
+        <span class='fraction'>4/4</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>0/8</span>
+        <span class='fraction'>7/7</span>
       </div>
     </div>
   </div>
-  <div class='status-line low'></div>
+  <div class='status-line high'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet">1
 2
@@ -62,40 +62,40 @@
 17
 18
 19
-20</td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+20</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >import {createSelector} from 'reselect';</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import {createSelector} from 'reselect';
 &nbsp;
 &nbsp;
-const <span class="fstat-no" title="function not covered" >noteDataSelector = <span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" >s</span>tate =&gt; state.notes.data;</span></span>
-const <span class="fstat-no" title="function not covered" >filterOptionsSelector = <span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" >s</span>tate =&gt; state.notes.filterOption;</span></span>
+const noteDataSelector = state =&gt; state.notes.data;
+const filterOptionsSelector = state =&gt; state.notes.filterOption;
 &nbsp;
-export const <span class="cstat-no" title="statement not covered" >getAllNotesSelector = createSelector(</span>
+export const getAllNotesSelector = createSelector(
     noteDataSelector,
     filterOptionsSelector,
-<span class="fstat-no" title="function not covered" >    (</span>noteData, filterOptionValue) =&gt; {
-        let notes = <span class="cstat-no" title="statement not covered" >[];</span>
-<span class="cstat-no" title="statement not covered" >        if (Array.isArray(noteData)) {</span>
-<span class="cstat-no" title="statement not covered" >            notes = noteData.sort(<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(</span>a, b) =&gt; new Date(b[filterOptionValue]) - new Date(a[filterOptionValue]));</span></span>
+    (noteData, filterOptionValue) =&gt; {
+        let notes = [];
+        <span class="missing-if-branch" title="else path not taken" >E</span>if (Array.isArray(noteData)) {
+            notes = noteData.sort((a, b) =&gt; new Date(b[filterOptionValue]) - new Date(a[filterOptionValue]));
         }
-<span class="cstat-no" title="statement not covered" >        return {</span>
+        return {
             notes: [...notes],
         }
     });
@@ -106,7 +106,7 @@ export const <span class="cstat-no" title="statement not covered" >getAllNotesSe
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Apr 24 2019 11:41:42 GMT+0100 (GMT Daylight Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Apr 25 2019 11:23:37 GMT+0100 (GMT Daylight Time)
 </div>
 </div>
 <script src="..\..\..\prettify.js"></script>

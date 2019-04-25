@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>0/10</span>
+        <span class='fraction'>4/4</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -30,18 +30,18 @@
         <span class='fraction'>0/0</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>0/1</span>
+        <span class='fraction'>3/3</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>0/10</span>
+        <span class='fraction'>4/4</span>
       </div>
     </div>
   </div>
-  <div class='status-line low'></div>
+  <div class='status-line high'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet">1
 2
@@ -74,23 +74,7 @@
 29
 30
 31
-32</td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+32</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -100,28 +84,44 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >import React from 'react';</span>
-<span class="cstat-no" title="statement not covered" >import {connect} from 'react-redux';</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react';
+import {connect} from 'react-redux';
 &nbsp;
-<span class="cstat-no" title="statement not covered" >import {getAllNotesSelector} from '../../../selectors/note/note.selector';</span>
-<span class="cstat-no" title="statement not covered" >import {getNotes, deleteNote} from '../../../actions/note/notes.action';</span>
-<span class="cstat-no" title="statement not covered" >import {showDeleteNoteConfirmationModal} from '../../../actions/common/modal.action';</span>
+import {getAllNotesSelector} from '../../../selectors/note/note.selector';
+import {getNotes} from '../../../actions/note/notes.action';
+import {showDeleteNoteConfirmationModal} from '../../../actions/common/modal.action';
 &nbsp;
-<span class="cstat-no" title="statement not covered" >import AllNotes from '../../../components/notes/AllNotes';</span>
+import AllNotes from '../../../components/notes/AllNotes';
 &nbsp;
 export class AllNotesContainer extends React.Component {
 &nbsp;
     componentDidMount() {
-<span class="cstat-no" title="statement not covered" >        this.props.getNotes();</span>
+        this.props.getNotes();
     }
 &nbsp;
     render() {
-<span class="cstat-no" title="statement not covered" >        return (</span>
+        return (
             &lt;AllNotes
                 data={this.props.notes}
                 confirmDelete={this.props.showDeleteNoteConfirmationModal}
@@ -131,18 +131,18 @@ export class AllNotesContainer extends React.Component {
 &nbsp;
 }
 &nbsp;
-const <span class="fstat-no" title="function not covered" >mapStateToProps = <span class="cstat-no" title="statement not covered" >(</span>state) =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >    return getAllNotesSelector(state)</span>
+const mapStateToProps = (state) =&gt; {
+    return getAllNotesSelector(state)
 };
 &nbsp;
-export default connect(mapStateToProps, {getNotes, deleteNote, showDeleteNoteConfirmationModal})(AllNotesContainer);
+export default connect(mapStateToProps, {getNotes, showDeleteNoteConfirmationModal})(AllNotesContainer);
 &nbsp;</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Apr 24 2019 11:41:42 GMT+0100 (GMT Daylight Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Apr 25 2019 11:23:37 GMT+0100 (GMT Daylight Time)
 </div>
 </div>
 <script src="..\..\..\..\prettify.js"></script>

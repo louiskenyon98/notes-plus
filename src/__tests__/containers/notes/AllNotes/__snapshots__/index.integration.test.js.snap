@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AllNotesContainer Integration Test should render AllNotes component with children 1`] = `
+exports[`AllNotesContainer Integration Test render should render AllNotesContainer 1`] = `
 <Provider
   store={
     Object {
@@ -13,26 +13,189 @@ exports[`AllNotesContainer Integration Test should render AllNotes component wit
     }
   }
 >
-  <Connect(AllNotesContainer)>
-    <AllNotesContainer
-      deleteNote={[Function]}
-      getNotes={[Function]}
-      notes={Array []}
-      showDeleteNoteConfirmationModal={[Function]}
-    >
-      <AllNotes
-        confirmDelete={[Function]}
-        data={Array []}
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "createHref": [Function],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <Connect(AllNotesContainer)>
+      <AllNotesContainer
+        getNotes={[Function]}
+        notes={
+          Array [
+            Object {
+              "body": "the first body",
+              "id": 90,
+              "title": "title number 1",
+            },
+            Object {
+              "body": "the second body",
+              "id": 91,
+              "title": "title number 2",
+            },
+          ]
+        }
+        showDeleteNoteConfirmationModal={[Function]}
       >
-        <div
-          className="container-fluid"
+        <AllNotes
+          confirmDelete={[Function]}
+          data={
+            Array [
+              Object {
+                "body": "the first body",
+                "id": 90,
+                "title": "title number 1",
+              },
+              Object {
+                "body": "the second body",
+                "id": 91,
+                "title": "title number 2",
+              },
+            ]
+          }
         >
           <div
-            className="row"
-          />
-        </div>
-      </AllNotes>
-    </AllNotesContainer>
-  </Connect(AllNotesContainer)>
+            className="container-fluid"
+          >
+            <div
+              className="row"
+            >
+              <Card
+                body="the first body"
+                delete={[Function]}
+                id={90}
+                key="90"
+                title="title number 1"
+              >
+                <div
+                  className="col-xs-1 col-md-4 col-xl-3 d-flex align-items-stretch column"
+                >
+                  <div
+                    className="ui raised card card"
+                  >
+                    <div
+                      className="content"
+                    >
+                      <i
+                        className="right floated close icon delete-button"
+                        onClick={[Function]}
+                      />
+                      <div
+                        className="header header"
+                      >
+                        title number 1
+                      </div>
+                      <div
+                        className="description body"
+                      >
+                        <p>
+                          the first body
+                        </p>
+                      </div>
+                    </div>
+                    <div
+                      className="extra content"
+                    >
+                      <span
+                        className="right floated pencil alternate"
+                      >
+                        <Link
+                          replace={false}
+                          to="/edit/90"
+                        >
+                          <a
+                            href="/edit/90"
+                            onClick={[Function]}
+                          >
+                            <i
+                              className="pencil alternate icon edit-button"
+                            />
+                          </a>
+                        </Link>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </Card>
+              <Card
+                body="the second body"
+                delete={[Function]}
+                id={91}
+                key="91"
+                title="title number 2"
+              >
+                <div
+                  className="col-xs-1 col-md-4 col-xl-3 d-flex align-items-stretch column"
+                >
+                  <div
+                    className="ui raised card card"
+                  >
+                    <div
+                      className="content"
+                    >
+                      <i
+                        className="right floated close icon delete-button"
+                        onClick={[Function]}
+                      />
+                      <div
+                        className="header header"
+                      >
+                        title number 2
+                      </div>
+                      <div
+                        className="description body"
+                      >
+                        <p>
+                          the second body
+                        </p>
+                      </div>
+                    </div>
+                    <div
+                      className="extra content"
+                    >
+                      <span
+                        className="right floated pencil alternate"
+                      >
+                        <Link
+                          replace={false}
+                          to="/edit/91"
+                        >
+                          <a
+                            href="/edit/91"
+                            onClick={[Function]}
+                          >
+                            <i
+                              className="pencil alternate icon edit-button"
+                            />
+                          </a>
+                        </Link>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </Card>
+            </div>
+          </div>
+        </AllNotes>
+      </AllNotesContainer>
+    </Connect(AllNotesContainer)>
+  </Router>
 </Provider>
 `;
