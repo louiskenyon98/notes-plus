@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
+import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {getNote, getNotes, patchNote} from '../../../actions/note/notes.action';
 import NoteFormContainer from '../NoteForm';
@@ -42,6 +43,14 @@ const mapStateToProps = (state) => {
     return {
         note: state.notes.edit
     }
+};
+
+NoteEditContainer.propTypes = {
+    getNote: PropTypes.func,
+    getNotes: PropTypes.func,
+    patchNote: PropTypes.func,
+    match: PropTypes.object,
+    note: PropTypes.object
 };
 
 export default connect(mapStateToProps, {getNote, getNotes, patchNote})(NoteEditContainer)

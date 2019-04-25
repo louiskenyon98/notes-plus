@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types'
 import styles from '../../../../../themes/style.scss';
 
 export default class StatusMessage extends React.PureComponent {
@@ -8,10 +9,10 @@ export default class StatusMessage extends React.PureComponent {
             return this.props.title;
         }
         if (this.props.status === 'success') {
-            return 'Successful'
+            return 'Success'
         }
         if (this.props.status === 'fail') {
-            return 'Sad times'
+            return 'Error'
         }
     }
 
@@ -30,3 +31,9 @@ export default class StatusMessage extends React.PureComponent {
         )
     }
 }
+StatusMessage.propTypes = {
+    title: PropTypes.string,
+    status: PropTypes.string,
+    body: PropTypes.string,
+    close: PropTypes.func
+};

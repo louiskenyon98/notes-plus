@@ -25,12 +25,12 @@ describe('StatusMessage', () => {
             it('should render Successful when there is not title prop and the status is success', () => {
                 props.title = '';
                 props.status = 'success';
-                expect(wrapper().find('h1').first().text()).toBe('Successful')
+                expect(wrapper().find('h1').first().text()).toBe('Success')
             });
             it('should render Sad times when there is not title prop and the status is fail', () => {
                 props.title = '';
                 props.status = 'fail';
-                expect(wrapper().find('h1').first().text()).toBe('Sad times')
+                expect(wrapper().find('h1').first().text()).toBe('Error')
             });
             it('should render nothing when there is not title prop and the status is blank', () => {
                 props.title = '';

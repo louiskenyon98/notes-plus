@@ -1,16 +1,21 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class Error extends React.PureComponent {
     render() {
-        const {message} = this.props;
-        if(message) {
+        if (this.props.message) {
             return (
                 <div className="ui error message">
-                    <div className="header">{message}</div>
+                    <div className="header">{this.props.message}</div>
                 </div>
             )
         }
         return null
     }
 }
+
+Error.propTypes = {
+    message: PropTypes.string
+};
+
 export default Error;

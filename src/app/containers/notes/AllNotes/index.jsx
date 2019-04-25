@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 
 import {getAllNotesSelector} from '../../../selectors/note/note.selector';
@@ -26,6 +27,12 @@ export class AllNotesContainer extends React.Component {
 
 const mapStateToProps = (state) => {
     return getAllNotesSelector(state)
+};
+
+AllNotesContainer.propTypes = {
+  getNotes: PropTypes.func,
+  notes: PropTypes.array,
+  showDeleteNoteConfirmationModal: PropTypes.func
 };
 
 export default connect(mapStateToProps, {getNotes, showDeleteNoteConfirmationModal})(AllNotesContainer);

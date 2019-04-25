@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {closeModal} from '../../../actions/common/modal.action';
 import Modal from '../../../components/common/Modal/Modal';
@@ -40,6 +41,11 @@ const mapStateToProps = (state) => {
     return {
         modal: state.common.modal
     }
+};
+
+ModalContainer.propTypes = {
+    modal: PropTypes.object,
+    closeModal: PropTypes.func
 };
 
 export default connect(mapStateToProps, {closeModal})(ModalContainer)

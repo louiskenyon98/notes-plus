@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import Select from '../../../../components/common/formFields/Select';
 import {filterOptions} from '../../../../config/filterOptions';
@@ -23,4 +24,10 @@ const mapStateToProps = (state) => {
         filterOption: state.notes.filterOption
     }
 };
+
+SelectContainer.propTypes = {
+    filterOption: PropTypes.string,
+    onChangeFilterValue: PropTypes.func
+};
+
 export default connect(mapStateToProps, {onChangeFilterValue})(SelectContainer);

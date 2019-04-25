@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Error from './Error';
 import styles from '../../../../themes/style.scss';
 
@@ -22,3 +23,7 @@ export class TextArea extends React.Component {
         )
     }
 }
+
+TextArea.propTypes = {
+    meta: PropTypes.object,
+};

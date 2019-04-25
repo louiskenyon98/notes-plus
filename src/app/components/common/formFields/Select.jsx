@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class Select extends React.PureComponent {
     constructor(props) {
@@ -29,5 +30,11 @@ class Select extends React.PureComponent {
         )
     }
 }
+
+Select.propTypes = {
+    options: PropTypes.array,
+    onChange: PropTypes.func,
+    value: PropTypes.string
+};
 
 export default Select;
