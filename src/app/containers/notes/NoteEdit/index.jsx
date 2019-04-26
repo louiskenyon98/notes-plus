@@ -3,7 +3,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {getNote, getNotes, patchNote} from '../../../actions/note/notes.action';
 import NoteFormContainer from '../NoteForm';
-import styles from '../../../../themes/style.scss';
+import styles from '../NotesContainer.styles.scss';
 
 export class NoteEditContainer extends React.Component {
     constructor(props) {
@@ -21,7 +21,7 @@ export class NoteEditContainer extends React.Component {
 
     render() {
         return (
-            <div className={`col-xl-4 offset-xl-4 col-lg-6 offset-lg-3 col-sm-8 offset-sm-2 ${styles["note-creator"]}`}>
+            <div className={`col-xl-4 offset-xl-4 col-lg-6 offset-lg-3 col-sm-8 offset-sm-2 ${styles.noteCreator}`}>
                 <h2>Edit Note</h2>
                 <NoteFormContainer
                     //Use Lodash to extract only the properties specified below from this.props.note.

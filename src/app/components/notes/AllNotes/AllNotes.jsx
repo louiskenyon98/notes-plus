@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Card from '../Card';
+import Card from '../Card/Card';
 
 class AllNotes extends React.PureComponent {
     renderAll() {

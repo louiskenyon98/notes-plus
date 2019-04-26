@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-import styles from '../../../../themes/style.scss';
+import styles from '../Notes.styles.scss';
 
 class Card extends React.PureComponent {
     render() {

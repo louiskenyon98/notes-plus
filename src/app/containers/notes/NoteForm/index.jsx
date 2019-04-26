@@ -2,7 +2,7 @@ import React from 'react';
 import {Field, reduxForm} from 'redux-form';
 import {TextArea, TextInput} from '../../../components/common/reduxFormFields/index';
 
-import styles from '../../../../themes/style.scss';
+import styles from '../NotesContainer.styles.scss';
 import {Link} from "react-router-dom";
 
 export class NoteFormContainer extends React.Component {

@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-import styles from '../../../../themes/style.scss';
+import styles from './Navigation.styles.scss';
 import SelectContainer from '../../../containers/common/formFields/SelectContainer';
 
 class Navigation extends React.PureComponent {

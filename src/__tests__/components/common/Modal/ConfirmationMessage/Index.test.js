@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import Index from '../../../../../app/components/common/Modal/ConfirmationMessage';
+import Index from '../../../../../app/components/common/Modal/ConfirmationMessage/ConfirmationMessage';
 
 describe('Index', () => {
     let props = {};

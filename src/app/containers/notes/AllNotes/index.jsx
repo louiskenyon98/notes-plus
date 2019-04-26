@@ -5,7 +5,7 @@ import {getAllNotesSelector} from '../../../selectors/note/note.selector';
 import {getNotes} from '../../../actions/note/notes.action';
 import {showDeleteNoteConfirmationModal} from '../../../actions/common/modal.action';
 
-import AllNotes from '../../../components/notes/AllNotes';
+import AllNotes from '../../../components/notes/AllNotes/AllNotes';
 
 export class AllNotesContainer extends React.Component {
 

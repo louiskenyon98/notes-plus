@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import StatusMessage from '../../../../../app/components/common/Modal/StatusMessage/Index';
+import StatusMessage from '../../../../../app/components/common/Modal/StatusMessage/StatusMessage';
 
 describe('StatusMessage', () => {
     let props = {};

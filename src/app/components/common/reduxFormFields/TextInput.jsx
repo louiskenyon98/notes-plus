@@ -1,6 +1,6 @@
 import React from 'react';
 import Error from './Error';
-import styles from "../../../../themes/style.scss";
+import styles from "./FormFields.styles.scss";
 
 export class TextInput extends React.Component {
 
@@ -12,8 +12,8 @@ export class TextInput extends React.Component {
     render() {
         const className = `field ${this.hasError() ? 'error' : ''}`;
         return (
-            <div className={`${className} ${styles["form-body-field-wrapper"]}`}>
-              <input {...this.props.input} placeholder={this.props.label} autoComplete="off" className={`${styles["form-title-field"]}`} />
+            <div className={`${className} ${styles.formBodyFieldWrapper}`}>
+              <input {...this.props.input} placeholder={this.props.label} autoComplete="off" className={`${styles.formTitleField}`} />
                 {this.hasError() &&
                 <Error
                     message={this.props.meta.error}

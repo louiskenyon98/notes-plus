@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import AllNotes from '../../../../app/components/notes/AllNotes/index';
+import AllNotes from '../../../../app/components/notes/AllNotes/AllNotes';
 
 describe('AllNotes', () => {
     let props = {};

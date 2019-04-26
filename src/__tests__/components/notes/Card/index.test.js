@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import Card from '../../../../app/components/notes/Card/index';
+import Card from '../../../../app/components/notes/Card/Card';
 
 describe('Card', () => {
     let props = {};

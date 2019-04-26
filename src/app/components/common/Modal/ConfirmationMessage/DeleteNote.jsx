@@ -1,5 +1,5 @@
 import React from 'react';
-import ConfirmationMessage from "./index";
+import ConfirmationMessage from "./ConfirmationMessage";
 
 export default class DeleteNote extends React.PureComponent {
     render() {

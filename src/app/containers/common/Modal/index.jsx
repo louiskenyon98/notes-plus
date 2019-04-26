@@ -2,7 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {closeModal} from '../../../actions/common/modal.action';
 import Modal from '../../../components/common/Modal/Modal';
-import StatusMessage from "../../../components/common/Modal/StatusMessage/Index";
+import StatusMessage from "../../../components/common/Modal/StatusMessage/StatusMessage";
 import DeleteNoteContainer from "./ConfirmationMessage/DeleteNoteContainer";
 
 export class ModalContainer extends React.Component {
