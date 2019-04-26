@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import ConfirmationMessage from "./index";
 
 export default class DeleteNote extends React.PureComponent {
@@ -20,7 +19,3 @@ export default class DeleteNote extends React.PureComponent {
         )
     }
 }
-DeleteNote.propTypes = {
-    cancel: PropTypes.func,
-    delete: PropTypes.func
-};

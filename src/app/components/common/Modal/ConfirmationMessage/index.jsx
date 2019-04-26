@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styles from '../../../../../themes/style.scss';
 
 export default class ConfirmationMessage extends React.PureComponent {
@@ -26,10 +25,3 @@ export default class ConfirmationMessage extends React.PureComponent {
         )
     }
 }
-ConfirmationMessage.propTypes = {
-    title: PropTypes.string,
-    body: PropTypes.string,
-    accept: PropTypes.object,
-    decline: PropTypes.object,
-    label: PropTypes.string
-};

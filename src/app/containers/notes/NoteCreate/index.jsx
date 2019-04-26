@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {getNotes, postNote} from '../../../actions/note/notes.action';
 import NoteFormContainer from '../NoteForm';
@@ -28,11 +27,6 @@ export class NoteCreateContainer extends React.Component {
         )
     }
 }
-
-NoteCreateContainer.propTypes = {
-  postNote: PropTypes.func,
-  getNotes: PropTypes.func
-};
 
 export default connect(
     null,

@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {deleteNote, getNotes} from '../../../../actions/note/notes.action';
 import {closeModal} from '../../../../actions/common/modal.action';
@@ -27,11 +26,5 @@ export class DeleteNoteContainer extends React.Component {
         )
     }
 }
-
-DeleteNoteContainer.propTypes = {
-  deleteNote: PropTypes.func,
-  closeModal: PropTypes.func,
-  getNotes: PropTypes.func
-};
 
 export default connect(undefined, {deleteNote, getNotes, closeModal})(DeleteNoteContainer)

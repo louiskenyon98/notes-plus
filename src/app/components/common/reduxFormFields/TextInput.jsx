@@ -1,8 +1,6 @@
 import React from 'react';
 import Error from './Error';
 import styles from "../../../../themes/style.scss";
-import PropTypes from "prop-types";
-import {TextArea} from "./TextArea";
 
 export class TextInput extends React.Component {
 
@@ -24,7 +22,3 @@ export class TextInput extends React.Component {
         )
     }
 }
-
-TextArea.propTypes = {
-    meta: PropTypes.object,
-};

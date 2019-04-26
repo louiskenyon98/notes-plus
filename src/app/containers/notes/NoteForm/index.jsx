@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import {Field, reduxForm} from 'redux-form';
 import {TextArea, TextInput} from '../../../components/common/reduxFormFields/index';
 
@@ -49,12 +48,6 @@ export const validate = (formValues) => {
     }
     return errors;
 };
-
-NoteFormContainer.propTypes = {
-  onSubmit: PropTypes.func,
-  handleSubmit: PropTypes.func
-};
-
 export default reduxForm({
     form: 'noteForm',
     validate,
