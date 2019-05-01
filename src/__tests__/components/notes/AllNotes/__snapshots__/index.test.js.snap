@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AllNotes render should render a card component with props 1`] = `
+<div
+  className="container-fluid"
+>
+  <div
+    className="row"
+  >
+    <Card
+      body="noteBody"
+      delete={[MockFunction]}
+      id={1}
+      key="1"
+      title="noteTitle"
+    />
+    <Card
+      body="noteBody2"
+      delete={[MockFunction]}
+      id={2}
+      key="2"
+      title="noteTitle2"
+    />
+    <Card
+      body="noteBody3"
+      delete={[MockFunction]}
+      id={3}
+      key="3"
+      title="noteTitle3"
+    />
+  </div>
+</div>
+`;

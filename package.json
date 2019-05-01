@@ -1,14 +1,15 @@
 {
-  "name": "TechTest-Submission",
+  "name": "louis-react-tech-test",
   "version": "1.0.0",
   "description": "Ageas frontend Tech test submission",
   "main": "src/index.js",
   "repository": "",
   "scripts": {
     "start": "concurrently \"node server/index.js\" \"webpack --config webpack.config.js --watch --colors --progress\"",
-    "build": "webpack -p"
+    "build": "webpack -p",
+    "test": "jest"
   },
-  "author": "Ageas",
+  "author": "Louis Kenyon",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.18.0",
@@ -20,6 +21,7 @@
     "express": "^4.15.3",
     "history": "^4.7.2",
     "lodash": "^4.17.11",
+    "prop-types": "^15.7.2",
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
     "react-redux": "^6.0.0",
@@ -27,10 +29,16 @@
     "redux": "^4.0.1",
     "redux-form": "^8.1.0",
     "redux-thunk": "^2.3.0",
+    "reselect": "^4.0.0",
     "sequelize": "^4.2.0",
     "sqlite3": "^4.0.4"
   },
   "devDependencies": {
+    "@stryker-mutator/core": "^1.3.0",
+    "@stryker-mutator/html-reporter": "^1.3.0",
+    "@stryker-mutator/javascript-mutator": "^1.3.0",
+    "@stryker-mutator/jest-runner": "^1.3.0",
+    "axios-mock-adapter": "^1.16.0",
     "babel-core": "^6.26.3",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^23.6.0",
@@ -48,9 +56,11 @@
     "express": "^4.16.3",
     "file-loader": "^0.11.2",
     "friendly-errors-webpack-plugin": "^1.7.0",
+    "identity-obj-proxy": "^3.0.0",
     "jest": "^23.6.0",
     "jest-cli": "^23.5.0",
     "node-sass": "^4.9.2",
+    "redux-mock-store": "^1.5.3",
     "sass-loader": "^6.0.7",
     "style-loader": "^0.23.1",
     "uglifyjs-webpack-plugin": "^2.0.1",
@@ -64,8 +74,18 @@
       "./enzymeSetup.js"
     ],
     "moduleNameMapper": {
-      "^.+\\.(css|less|scss)$": "babel-jest"
-    }
+      "\\.(css|scss)$": "identity-obj-proxy"
+    },
+    "collectCoverage": true,
+    "coverageReporters": [
+      "json",
+      "html"
+    ],
+    "collectCoverageFrom": [
+      "**/src/app/**/*.{js,jsx}",
+      "!**/node_modules/**",
+      "!**/__test__/**"
+    ]
   },
   "babel": {
     "presets": [

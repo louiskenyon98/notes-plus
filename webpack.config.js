@@ -4,7 +4,7 @@ const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
 
 module.exports = {
   entry: ['./src/app/index.js'],
-  output: {
+    output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, './public/'),
   },

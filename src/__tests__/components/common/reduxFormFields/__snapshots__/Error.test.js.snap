@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Error render should not render an error message when one is not supplied 1`] = `""`;
+
+exports[`Error render should render an error message when one is supplied 1`] = `
+<div
+  className="ui error message"
+>
+  <div
+    className="header"
+  >
+    error message
+  </div>
+</div>
+`;
