@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Index render should render a component with body 1`] = `
+<Fragment>
+  <h1>
+    Confirmation message title
+  </h1>
+  Confirmation message body
+  <div
+    style={
+      Object {
+        "float": "right",
+        "margin": 20,
+      }
+    }
+  >
+    <button
+      className="modalButton ui inverted primary button"
+      onClick={[MockFunction]}
+    >
+      DELETE
+    </button>
+    <button
+      className="modalButton ui inverted red button"
+      onClick={[MockFunction]}
+    >
+      CANCEL
+    </button>
+  </div>
+</Fragment>
+`;
+
+exports[`Index render should render no body when no body is passed in 1`] = `
+<Fragment>
+  <h1>
+    Confirmation message title
+  </h1>
+  <div
+    style={
+      Object {
+        "float": "right",
+        "margin": 20,
+      }
+    }
+  >
+    <button
+      className="modalButton ui inverted primary button"
+      onClick={[MockFunction]}
+    >
+      DELETE
+    </button>
+    <button
+      className="modalButton ui inverted red button"
+      onClick={[MockFunction]}
+    >
+      CANCEL
+    </button>
+  </div>
+</Fragment>
+`;

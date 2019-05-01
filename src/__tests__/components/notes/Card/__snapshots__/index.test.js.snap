@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card render should render a card with a title, body, and icons 1`] = `
+<div
+  className="col-xs-1 col-md-4 col-xl-3 d-flex align-items-stretch column"
+>
+  <div
+    className="ui raised card card"
+  >
+    <div
+      className="content"
+    >
+      <i
+        className="right floated close icon delete-button"
+        onClick={[Function]}
+      />
+      <div
+        className="header header"
+      >
+        noteCard Title
+      </div>
+      <div
+        className="description body"
+      >
+        <p>
+          noteCard Body
+        </p>
+      </div>
+    </div>
+    <div
+      className="extra content"
+    >
+      <span
+        className="right floated pencil alternate"
+      >
+        <Link
+          replace={false}
+          to="/edit/1"
+        >
+          <i
+            className="pencil alternate icon edit-button"
+          />
+        </Link>
+      </span>
+    </div>
+  </div>
+</div>
+`;

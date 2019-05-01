@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ModalContainer render should render the Index component when type = deleteNoteConfirmation 1`] = `
+<Modal
+  close={[MockFunction]}
+  show={true}
+>
+  <Connect(DeleteNoteContainer)
+    foo="bar"
+  />
+</Modal>
+`;
+
+exports[`ModalContainer render should render the StatusMessage component when type = status 1`] = `
+<Modal
+  close={[MockFunction]}
+  show={true}
+>
+  <StatusMessage
+    close={[MockFunction]}
+    foo="bar"
+  />
+</Modal>
+`;
+
+exports[`ModalContainer render should set show prop to false when show = false 1`] = `
+<Modal
+  close={[MockFunction]}
+  show={false}
+>
+  <StatusMessage
+    close={[MockFunction]}
+    foo="bar"
+  />
+</Modal>
+`;

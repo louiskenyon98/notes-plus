@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navigation render should render 1`] = `
+<div
+  className="ui menu nav"
+>
+  <Link
+    className="header item title"
+    replace={false}
+    to="/"
+  >
+    notes+
+  </Link>
+  <Connect(SelectContainer) />
+  <div
+    className="link item right"
+  >
+    <Link
+      replace={false}
+      to="/new"
+    >
+      <div
+        className="ui inverted primary button"
+      >
+        New Note
+      </div>
+    </Link>
+  </div>
+</div>
+`;

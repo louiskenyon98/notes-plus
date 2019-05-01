@@ -1,0 +1,21 @@
+.formTitleField {
+  border: none !important;
+  font-size: 1.5em !important;
+  text-align: center !important;
+  background-color: #2980b9 !important;
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+  font-family: 'Thasadith', sans-serif !important;
+  :focus {
+    color: #fff !important;
+  }
+}
+.formBodyFieldWrapper {
+  .formBodyField {
+    border: none !important;
+    font-size: 1.5em !important;
+    font-family: 'Thasadith', sans-serif !important;
+    resize: none;
+  }
+
+}

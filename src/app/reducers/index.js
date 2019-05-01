@@ -1,11 +1,11 @@
 import {combineReducers} from 'redux';
 import {reducer as formReducer} from 'redux-form';
-import noteReducer from './noteReducer';
-import errorReducer from './errorReducer';
+import noteReducer from './note/note.reducer';
+import commonReducer from './common/index'
 
 export default combineReducers({
     form: formReducer,
     notes: noteReducer,
-    error: errorReducer
+    common: commonReducer
 });
 

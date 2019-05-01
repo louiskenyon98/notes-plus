@@ -1,0 +1,153 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NoteEditContainer Integration Test render should render NoteEditContainer component 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "createHref": [Function],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <Connect(NoteEditContainer)
+      match={
+        Object {
+          "params": Object {
+            "id": 91,
+          },
+        }
+      }
+    >
+      <NoteEditContainer
+        getNote={[Function]}
+        getNotes={[Function]}
+        match={
+          Object {
+            "params": Object {
+              "id": 91,
+            },
+          }
+        }
+        note={
+          Object {
+            "body": "body1",
+            "id": 91,
+            "title": "title1",
+          }
+        }
+        patchNote={[Function]}
+      >
+        <div
+          className="col-xl-4 offset-xl-4 col-lg-6 offset-lg-3 col-sm-8 offset-sm-2 note-creator"
+        >
+          <h2>
+            Edit Note
+          </h2>
+          <Component
+            initialValues={
+              Object {
+                "body": "body1",
+                "id": 91,
+                "title": "title1",
+              }
+            }
+            onSubmit={[Function]}
+          >
+            <NoteFormContainer
+              handleSubmit={
+                [MockFunction] {
+                  "calls": Array [
+                    Array [
+                      [Function],
+                    ],
+                  ],
+                  "results": Array [
+                    Object {
+                      "isThrow": false,
+                      "value": [Function],
+                    },
+                  ],
+                }
+              }
+              initialValues={
+                Object {
+                  "body": "body1",
+                  "id": 91,
+                  "title": "title1",
+                }
+              }
+              onSubmit={[Function]}
+            >
+              <form
+                className="note-editor-form ui form error form"
+                onSubmit={[Function]}
+              >
+                <Field
+                  component={[Function]}
+                  label="Enter Note Title..."
+                  name="title"
+                >
+                  <div />
+                </Field>
+                <Field
+                  component={[Function]}
+                  label="Enter Note Body..."
+                  name="body"
+                >
+                  <div />
+                </Field>
+                <button
+                  className="ui right floated button"
+                >
+                  Submit
+                </button>
+                <Link
+                  replace={false}
+                  to="/"
+                >
+                  <a
+                    href="/"
+                    onClick={[Function]}
+                  >
+                    <button
+                      className="ui button"
+                    >
+                      Cancel
+                    </button>
+                  </a>
+                </Link>
+              </form>
+            </NoteFormContainer>
+          </Component>
+        </div>
+      </NoteEditContainer>
+    </Connect(NoteEditContainer)>
+  </Router>
+</Provider>
+`;

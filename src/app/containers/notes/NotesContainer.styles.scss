@@ -1,0 +1,19 @@
+.noteCreator {
+  width: 100%;
+  margin-top: 10vh;
+  h2 {
+    text-align: center;
+  }
+}
+.form {
+  align-items: center !important;
+  font-weight: 300;
+  border: 2px solid red;
+  button {
+    background-color: #3498db !important;
+    color: #fff !important;
+  }
+  button:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,.09), 0 6px 6px rgba(0,0,0,.13) !important;
+  }
+}

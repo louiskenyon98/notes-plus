@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Routes render should render Routes component 1`] = `
+<Router
+  history={
+    Object {
+      "action": "POP",
+      "block": [Function],
+      "createHref": [Function],
+      "go": [Function],
+      "goBack": [Function],
+      "goForward": [Function],
+      "length": 1,
+      "listen": [Function],
+      "location": Object {
+        "hash": "",
+        "pathname": "/",
+        "search": "",
+        "state": undefined,
+      },
+      "push": [Function],
+      "replace": [Function],
+    }
+  }
+>
+  <Navigation />
+  <Switch>
+    <Route
+      component={[Function]}
+      path="/edit/:id"
+    />
+    <Route
+      component={[Function]}
+      path="/new"
+    />
+    <Route
+      component={[Function]}
+      path="/"
+    />
+  </Switch>
+</Router>
+`;
