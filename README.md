@@ -1,7 +1,5 @@
 # notes+ #
-
-## Ageas assessment submission
-This GitHub Repository comprises my submission to the Ageas Junior Web Developer React Assessment, as part of stage 2 of the application process.
+A React/Redux note taking application running on a NodeJS backend.
 ## Getting Started
 
 Install dependencies:
